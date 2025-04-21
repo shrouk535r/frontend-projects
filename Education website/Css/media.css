@@ -1,0 +1,63 @@
+@media screen and (max-width: 599px) {
+    /* Course */
+
+    .mainCourses
+    {
+        flex-wrap: wrap;
+    }
+    .CourseCard
+    {
+        width: 100%;
+    }
+    #Statistics  .layer .container
+    {
+        flex-wrap: wrap;
+    }
+    #Statistics  .layer .container .firstone
+    {
+        width: 50%;
+
+    }
+
+}
+
+@media screen and (min-width:600px) and (max-width: 768px) {
+    .mainCourses
+    {
+        flex-wrap: wrap;
+    }
+    .CourseCard
+    {
+        width: 42%;
+    }
+    #Statistics  .layer .container
+    {
+        flex-wrap: wrap;
+    }
+    #Statistics  .layer .container .firstone
+    {
+        width: 50%;
+
+    }
+
+}
+@media screen and (min-width:769px) and (max-width: 991px) {
+    .mainCourses
+    {
+        flex-wrap: wrap;
+    }
+    .CourseCard
+    {
+        width: 42%;
+    }
+}
+@media screen and (min-width:992px) and(max-width: 1200px) {
+    .mainCourses
+    {
+        flex-wrap: wrap;
+    }
+    .CourseCard
+    {
+        width: 25%;
+    }
+}
