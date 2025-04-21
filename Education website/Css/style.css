@@ -188,6 +188,36 @@ nav ul li a {
 
 }
 
+/* Statistics */
+#Statistics
+{
+    background-image: url(../imgs/mount-everest-pictures-1656-x-900-0p2xlriorb502v2k.jpg);
+    margin-top: 50px;
+    height: 40vh;
+    background-position:center  ;
+    background-size: cover;
+}
+#Statistics  .layer
+{
+    width: 100%;
+    height: 40vh;
+    background-color: rgba(0, 0, 0, .8);
+}
+#Statistics  .layer .container
+{
+    margin: auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    width: 100%;
+    justify-content: space-around;
+    color: white;
+}
+#Statistics  .layer .container .firstone
+{
+    text-align: center;
+    font-size: 20px;
+}
+
 
 /* Testimonial */
 #Testimonial
