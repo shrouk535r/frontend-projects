@@ -18,6 +18,18 @@
         width: 50%;
 
     }
+    .content
+    {
+        width: 100%;
+    }
+    .content
+    {
+        flex-wrap: wrap;
+    }
+    .CourseCardPage
+    {
+        width: 100%;
+    }
 
 }
 
@@ -39,6 +51,14 @@
         width: 50%;
 
     }
+    .CourseCardPage
+    {
+        width: 100%;
+    }
+    .content
+    {
+        flex-wrap: wrap;
+    }
 
 }
 @media screen and (min-width:769px) and (max-width: 991px) {
@@ -50,6 +70,14 @@
     {
         width: 42%;
     }
+    .CourseCardPage
+    {
+        width: 42%;
+    }
+    .content
+    {
+        flex-wrap: wrap;
+    }
 }
 @media screen and (min-width:992px) and(max-width: 1200px) {
     .mainCourses
@@ -59,5 +87,9 @@
     .CourseCard
     {
         width: 25%;
+    }
+    .CourseCardPage
+    {
+        width: 34%;
     }
 }
