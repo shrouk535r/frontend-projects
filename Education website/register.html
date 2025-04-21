@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="stylesheet" href="Css/register.css">
+</head>
+<body>
+    <nav>
+        <div class="navContent">
+            <div >
+                <h1>E-learning</h1>
+            </div>
+        <ul>
+            <li>
+                <div class="navParent">
+                <a href="#Home">Home</a>
+            </div>
+            </li>
+            <li>
+                <div  class="navParent">
+                <a href="#About">About</a>
+            </div>
+            </li>
+            <li>
+                <div class="navParent">
+                <a href="#Courses">Courses</a>
+            </div>
+            </li>
+            <li>
+                <div  class="navParent">
+                <a href="#Testimonial">Reviews</a>
+            </div>
+            </li>
+            <li>
+                <div  class="navParent">
+                <a href="#Contact">Contact</a>
+            </div>
+            </li>
+        </ul>
+        <div class="account-buttons">
+            <button ><a href="login.html">Sign in</a></button>
+            <button ><a href="register.html">Sign up</a></button>
+
+        </div>
+    </div>
+    </nav>
+    <section class="home">
+        <div class="layer">
+            <h2 style="color: white;">Register</h2>
+        </div>
+    </section>
+   <section class="register-form">
+    <h2>Create a new account</h2>
+    <form action="index.html" method="post">
+        <div id="name-sec">
+            <label for="name">name</label>
+            <br>
+            <input required class="form-inputs" id="name" placeholder="Enter Your Name" type="text" >
+        </div>
+        <div id="mail-sec">
+            <label for="email">email</label>
+            <br>
+            <input required class="form-inputs" id="email" type="email" placeholder="name@email.com">
+        </div><div id="pass-sec">
+            <label for="password">password</label>
+            <br>
+            <input required class="form-inputs" id="password" type="password" placeholder="Create password">
+        </div>
+    </div>
+    <div id="re-pass-sec">
+        <label for="re-password">confirm password</label>
+        <br>
+        <input required class="form-inputs" id="re-password" type="password"  placeholder="Confirm password">
+    </div>
+    <div id="profile-sec">
+        <label for="profile">select profile</label>
+        <br>
+        <input class="form-inputs" type="file" accept="image/*" name="profile-pic" id="profile">
+    </div>
+    <button type="submit">SIGN UP</button>
+    <p id="login">Already have an account? <a href="login.html">Sign in</a></p>
+    </form>
+   </section>
+</body>
+</html>
