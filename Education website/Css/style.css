@@ -46,7 +46,6 @@ nav ul li a {
     color: white;
     margin: 5px 25px;
     padding: 5px 0px;
-    transition: all 1s;
 }
 .navParent
 {
@@ -188,7 +187,211 @@ nav ul li a {
 
 }
 
+/* Statistics */
+#Statistics
+{
+    background-image: url(../imgs/mount-everest-pictures-1656-x-900-0p2xlriorb502v2k.jpg);
+    margin-top: 50px;
+    height: 40vh;
+    background-position:center  ;
+    background-size: cover;
+}
+#Statistics  .layer
+{
+    width: 100%;
+    height: 40vh;
+    background-color: rgba(0, 0, 0, .8);
+}
+#Statistics  .layer .container
+{
+    margin: auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    width: 100%;
+    justify-content: space-around;
+    color: white;
+}
+#Statistics  .layer .container .firstone
+{
+    text-align: center;
+    font-size: 20px;
+}
 
+/* course */
+#Courses
+{
+    margin: 50px 0px;
+}
+.courseHeader
+{
+    margin: auto;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.mainHead{
+    margin: auto;
+    text-align: center;
+}
+.courseHeader h2
+{
+    color: rgb(28, 113, 240);
+    text-align: center;
+}
+
+.courseHeader .firstTop
+{
+    width: 90px;
+    height: 2px;
+    left: -70px;
+    bottom: 50%;
+    background-color: rgb(28, 113, 240);
+    align-self: center;
+    margin-right: 10px;
+}
+.courseHeader span
+{
+    width: 90px;
+    height: 2px;
+    left: -70px;
+    bottom: 50%;
+    background-color: rgb(28, 113, 240);
+    align-self: center;
+    margin-left: 10px;
+}
+
+.Headcontent
+{
+
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+.HeadcontentDetails
+{
+    text-align: start;
+}
+.courseIcons
+{
+
+    display: flex;
+}
+.firstCourseIcon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-right: 10px;
+    border: solid 1px rgb(229, 225, 225);
+}
+.secondCourseIcon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border: solid 1px rgb(229, 225, 225);
+    cursor: pointer; 
+}
+.mainCourses
+{
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+.CourseCard
+{
+    width: 25%;
+    border: solid 1px rgb(238, 234, 234);
+    padding: 10px;
+    overflow: hidden;
+    margin: 0px 8px;
+    flex-wrap: wrap;
+}
+.CourseCard img
+{
+    width: 100%;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.CourseCard h2
+{
+    font-size: 15px;
+    font-weight: 400;
+}
+.CourseCard p
+{
+    font-weight: 800;
+    font-size: 14px;
+    transition: all .3s;
+}
+.CourseCard p:hover
+{
+    color: #ffe342;
+    cursor: pointer;
+}
+.CourseCard a
+{
+    text-decoration: none;   
+}
+.CourseCard a:hover
+{
+    text-decoration: underline;   
+}
+.CourseCard img:hover
+{
+    transform: scale(1.1);
+}
+.CourseCard  a
+{
+    color: #ffe342;
+    text-decoration: none;
+}
+.CourseCard  a:hover
+{
+    color: black;
+    text-decoration: none;
+}
+.CourseCard button
+{
+    background-color: transparent;
+    border: solid 2px #ffe342;
+    color: #ffe342;
+    font-weight: 300;
+    border-radius: 10px;
+    background-color: black;
+    cursor: pointer;
+    padding: 10px;
+    transition: all .3s;
+}
+.CourseCard button:hover
+{
+    background-color: #ffe342;
+    color: #333333;
+}
+
+.courseFooter
+{
+    display: flex;
+    align-items: center;
+    color: gray;
+}
+.courseFooter i
+{
+    padding-right: 5px;
+    padding-left: 10px;
+}
+.mainFooter
+{
+    display: flex;
+    justify-content: space-between;
+}
 /* Testimonial */
 #Testimonial
 {
