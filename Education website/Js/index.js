@@ -49,10 +49,10 @@
             }, 500);
         }
     
-        // rightArrow.addEventListener("click", rotateLeft);
-        // leftArrow.addEventListener("click", rotateRight);
+         rightArrow.addEventListener("click", rotateLeft);
+         leftArrow.addEventListener("click", rotateRight);
     
-        // updateSlide(); // Initialize carousel correctly
+         updateSlide(); // Initialize carousel correctly
     });
     
     
@@ -90,7 +90,7 @@
             });
         }, { threshold: 0.5 }); // Activates when 50% of the section is visible
     
-        // observer.observe(statisticsSection);
+        observer.observe(statisticsSection);
     });
     
 
