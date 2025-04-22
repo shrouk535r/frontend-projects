@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Navigation Bar</title>
+    <link rel="stylesheet" href="Css/profile.css">
+    <link rel="stylesheet" href="Css/all.min.css">
+    <link rel="stylesheet" href="Css/media.css">
+    <script src="https://kit.fontawesome.com/092297307c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+   
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="info">
+            <h1 class="info-text">Mariem Karam</h1>
+            <h3 class="info-text">Software Engineer</i></h3>
+            <a class="info-link" href=""><i class="fa-brands fa-facebook"></i></a>
+            <a class="info-link" href=""><i class="fa-brands fa-facebook"></i></a>
+            <a class="info-link" href=""><i class="fa-brands fa-facebook"></i></a>
+            <a class="info-link" href=""><i class="fa-brands fa-facebook"></i></a>
+        </div>
+        <hr>
+        <a class="list" href="#">My Courses</a>
+        <a class="list" href="#">Certificates</a>
+        <a class="list" href="#">Gradebook</a>
+        <a class="list" href="#">Quizzes</a>
+        <a class="list" href="#">Wishlist</a>
+        <a class="list" href="#">Orders</a>
+        <a class="list" href="#">Assignments</a>
+        <a class="list" href="#">Settings</a>
+        <a class="list" href="#">LogOut</a>
+    </div>
+
+    <div class="content">
+        <!-- <h2>Content</h2>
+        <p>This is the main content of the page.</p> -->
+        <div class="info-courses">
+            <div class="sub-courses">
+                <div class="courses-icon">
+                    <i class="fa-brands fa-3x fa-facebook"></i>
+                </div>
+               <div class="info-course">
+                <p>Total Course</p>
+                <h2>8</h2>
+               </div>
+            </div>
+
+            <div class="sub-courses">
+                <div class="courses-icon">
+                    <i class="fa-brands fa-3x fa-facebook"></i>
+                </div>
+                <div class="info-course">
+                    <p>Total Course</p>
+                    <h2>8</h2>
+                   </div>
+            </div>
+
+            <div class="sub-courses">
+                <div class="courses-icon">
+                    <i class="fa-brands fa-3x fa-facebook"></i>
+                </div>
+                <div class="info-course">
+                    <p>Total Course</p>
+                    <h2>8</h2>
+                   </div>
+            </div>
+
+            <div class="sub-courses">
+                <div class="courses-icon">
+                    <i class="fa-brands fa-3x fa-facebook"></i>
+                </div>
+                <div class="info-course">
+                    <p>Total Course</p>
+                    <h2>8</h2>
+                   </div>
+            </div>
+
+            <div class="sub-courses">
+                <div class="courses-icon">
+                    <i class="fa-brands fa-3x fa-facebook"></i>
+                </div>
+                <div class="info-course">
+                    <p>Total Course</p>
+                    <h2>8</h2>
+                   </div>
+            </div>
+
+            <div class="sub-courses">
+                <div class="courses-icon">
+                    <i class="fa-brands fa-3x fa-facebook"></i>
+                </div>
+                <div class="info-course">
+                    <p>Total Course</p>
+                    <h2>8</h2>
+                   </div>
+            </div>
+        </div>
+
+
+        <div class="complete-page">
+        <ul>
+
+            <li>
+                <div class="options" onclick="flip('all')">
+                    <a href="#all">All</a>
+                </div>
+            </li>
+
+            <li>
+                <div class="options">
+                    <a href="#saved" onclick="flip('saved')">Saved</a>
+                </div>
+               
+            </li>
+            <li>
+                <div class="options">
+                    <a href="#publish" onclick="flip('publish')">Publish</a>
+                </div>
+            </li>
+            
+        </ul>
+       
+           
+        </div>
+
+
+        <hr>
+
+        <div id="all" class="op">
+            <div class="CourseCardPage">
+                <img src="imgs/course1.jpg" alt="">
+               <a href=""><h2>Keny White</h2></a> 
+                <p>How To Create An Online Course</p>
+                <div class="btnCourse">
+                <button><a href="login.html">Enroll</a></button>
+            </div>
+                <div class="mainFooter">
+                <div class="courseFooter">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <span>30</span>
+                    <i class="fa-solid fa-user"></i>
+                    <span>25</span>
+                </div>
+                <div>
+                    <p style="color: green;">Free</p>
+                </div>
+            </div>
+            </div>
+            <div class="CourseCardPage">
+                <img src="imgs/course2.jpg" alt="">
+               <a href=""><h2>Keny White</h2></a> 
+                <p>How To Teach An Online Course</p>
+                <div class="btnCourse">
+                    <button><a href="login.html">Enroll</a></button>
+                </div>
+                <div class="mainFooter">
+                    <div class="courseFooter">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>30</span>
+                        <i class="fa-solid fa-user"></i>
+                        <span>25</span>
+                    </div>
+                    <div>
+                        <p style="color: green;">Free</p>
+                    </div>
+                </div>
+            </div>
+            <div class="CourseCardPage">
+                <img src="imgs/course3.jpg" alt="">
+               <a href=""><h2>Keny White</h2></a> 
+                <p>The Complete Online Teaching Masterclass</p>
+                <div class="btnCourse">
+                    <button><a href="login.html">Enroll</a></button>
+                </div>
+                <div class="mainFooter">
+                    <div class="courseFooter">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>30</span>
+                        <i class="fa-solid fa-user"></i>
+                        <span>25</span>
+                    </div>
+                    <div>
+                        <p style="color: green;">Free</p>
+                    </div>
+                </div>
+            </div>
+            <div class="CourseCardPage">
+                <img src="imgs/course4.jpg" alt="">
+               <a href=""><h2>Keny White</h2></a> 
+                <p>Create an LMS Website with LearnPress</p>
+                <div class="btnCourse">
+                    <button><a href="login.html">Enroll</a></button>
+                </div>
+                <div class="mainFooter">
+                    <div class="courseFooter">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>30</span>
+                        <i class="fa-solid fa-user"></i>
+                        <span>25</span>
+                    </div>
+                    <div>
+                        <p style="color: green;">Free</p>
+                    </div>
+                </div>
+            </div>
+            <div class="CourseCardPage">
+                <img src="imgs/course4.jpg" alt="">
+               <a href=""><h2>Keny White</h2></a> 
+                <p>Create an LMS Website with LearnPress</p>
+                <div class="btnCourse">
+                    <button><a href="login.html">Enroll</a></button>
+                </div>
+                <div class="mainFooter">
+                    <div class="courseFooter">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>30</span>
+                        <i class="fa-solid fa-user"></i>
+                        <span>25</span>
+                    </div>
+                    <div>
+                        <p style="color: green;">Free</p>
+                    </div>
+                </div>
+            </div>
+            <div class="CourseCardPage">
+                <img src="imgs/course4.jpg" alt="">
+               <a href=""><h2>Keny White</h2></a> 
+                <p>Create an LMS Website with LearnPress</p>
+                <div class="btnCourse">
+                    <button><a href="login.html">Enroll</a></button>
+                </div>
+                <div class="mainFooter">
+                    <div class="courseFooter">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>30</span>
+                        <i class="fa-solid fa-user"></i>
+                        <span>25</span>
+                    </div>
+                    <div>
+                        <p style="color: green;">Free</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="saved" class="op" style="display: none;">
+            <p style="border: 1px solid grey; padding: 10px; border-radius: 5px;">No Courses avilable!</p>
+
+        </div>
+
+        <div id="publish" class="op" style="display: none;">
+            <p style="border: 1px solid grey; padding: 10px; border-radius: 5px;">No Courses avilable!</p>
+
+        </div>
+
+    </div>
+  
+    </div>
+
+
+    
+
+
+</body>
+</html>
