@@ -232,14 +232,12 @@ section.courseCategorize{
     text-align: center;
     padding-bottom:20px ;
     font-size: 30px;
-    /* height: 5; */
 }
 
 .categroies-content
 {
     display: flex;
     justify-content: space-around;
-    /* background-color: aqua; */
     flex-wrap: wrap;
     position: relative;
     
@@ -270,7 +268,6 @@ section.courseCategorize{
 }
  .category-item:before
 {
-    /* position: absolute; */
     top: 0;
     left: 0;
     display: block;
@@ -288,15 +285,52 @@ section.courseCategorize{
     text-align: center;
 
 }
-.category-item a
-{
-text-decoration: none;
+
+.category-desc h3{
+    margin: auto;
+    /* text-align: center; */
+    color: black;
+    /* padding-right: 30px; */
 }
-.categroies-content .categoryBtn
+.category-desc p
 {
-    display: flex;
-    justify-content: center;
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+    /* margin-bottom: 20px; */
+    /* text-align: center; */
+    /* padding-right: 30px; */
+
+}
+
+.category-icon img
+{
     width: 100%;
+}
+
+.explore-btn {
+    display: block;
+    padding: 10px 20px;
+    border: 2px solid #007bff;
+    background-color: transparent;
+    color: #007bff;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 50px;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+}
+
+.explore-btn:hover {
+    background-color: #007bff;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.explore-btn:active {
+    transform: scale(0.95);
 }
 /* course */
 #Courses
