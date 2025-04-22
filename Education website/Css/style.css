@@ -136,7 +136,7 @@ nav ul li a {
     transform: translate(-50%,0);
     /* font-size: 50px; */
     color: var(--about-color);
-    width: 300px;
+    width: 30%;
     /* height: 70px; */
 }
 #about h3{
