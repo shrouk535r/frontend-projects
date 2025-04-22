@@ -8,10 +8,11 @@ nav h1
 }
 nav
 {
+    z-index: 5555;
     background-color: transparent;
     width: 100%;
-    margin-top: 10px;
-    height: 50px;
+    margin-top: 0px;
+    height: 70px;
     display: flex;
     position: fixed;
     top: 0;
@@ -32,7 +33,6 @@ nav
 }
 nav ul 
 {
-    margin: 0px;
     display: flex;
     list-style-type: none;
     align-content: end;
@@ -41,9 +41,8 @@ nav ul
 nav ul li a {
     text-decoration: none;
     color: white;
-    margin: 5px 25px;
-    padding: 5px 0px;
-    transition: all 1s;
+    margin: 25px 25px;
+    padding: 15px 0px;
 }
 .navParent
 {
@@ -59,7 +58,7 @@ nav ul li a {
     position: absolute; 
     bottom: -10px;
     left: 0px; 
-    background-color: gold; 
+    background-color: #ffe342; 
     transition: all .1s ease-in-out;
 }
 .navParent a:hover::after 
