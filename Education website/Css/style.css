@@ -307,7 +307,10 @@ section.courseCategorize{
 {
     width: 100%;
 }
-
+.categoryBtn a
+{
+text-decoration: none;
+}
 .explore-btn {
     display: block;
     padding: 10px 20px;
