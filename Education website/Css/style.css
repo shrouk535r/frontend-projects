@@ -111,7 +111,7 @@ nav ul li a {
 }
 
 /* About */
-#about{
+#About{
     background-color: black;
     padding-bottom: 20px;
     --about-color:#ffe342;
@@ -120,16 +120,16 @@ nav ul li a {
     background-color: rgb(50, 50,50);
     padding: 20px;
 }
-#about h2,#about p,#about h3{
+#About h2,#About p,#About h3{
     color:whitesmoke;
     text-align: center;
 
 }
-#about h2{
+#About h2{
     font-size: 50px;
     margin-bottom: 10px;
 }
-#about img{
+#About img{
     position: relative;
     left: 50%;
     transform: translate(-50%,0);
@@ -138,11 +138,11 @@ nav ul li a {
     width: 30%;
     /* height: 70px; */
 }
-#about h3{
+#About h3{
     font-size: 20px;
 }
 
-#about{
+#About{
     display: flex;
     flex-direction: column;
     /* align-items: center; */
@@ -155,16 +155,18 @@ nav ul li a {
     grid-template-columns:repeat(3,1fr);
     gap: 20px;;
 }
-@media (max-width: 700px){
-    .about-container{
-        grid-template-columns: 1fr;
-    }
-}
+
 #read-buuton
 {
     position: relative;
     height: fit-content;
 }
+#read-buuton
+{
+    color: rgb(255, 227, 66);
+    text-decoration: none;
+}
+
 #read-button button{
     position: relative;
     left: 50%;
