@@ -39,6 +39,14 @@
         width: 100%;        
     }
 
+    /* instructor */
+    #instructors #content{
+        flex-wrap: wrap;
+    }
+    .instructor-card{
+        width: 100%;
+    }
+
 }
 
 @media screen and (min-width:600px) and (max-width: 768px) {

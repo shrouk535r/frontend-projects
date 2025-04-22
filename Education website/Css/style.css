@@ -112,16 +112,16 @@ nav ul li a {
 
 /* About */
 #About{
-    background-color: black;
+    background-color: white;
     padding-bottom: 20px;
-    --about-color:#ffe342;
+    --about-color:gold
 }
 .about-items{
-    background-color: rgb(50, 50,50);
+    background-color: whitesmoke;
     padding: 20px;
 }
 #About h2,#About p,#About h3{
-    color:whitesmoke;
+    color:black;
     text-align: center;
 
 }
@@ -163,7 +163,7 @@ nav ul li a {
 }
 #read-buuton
 {
-    color: rgb(255, 227, 66);
+    color: rgb(240, 204, 0);
     text-decoration: none;
 }
 
@@ -172,8 +172,8 @@ nav ul li a {
     left: 50%;
     transform: translate(-50%,0);
     background-color: transparent;
-    color: rgb(255, 227, 66);
-    border: 2px rgb(255, 227, 66) solid;
+    color: rgb(240, 204, 0);
+    border: 2px rgb(240, 204, 0) solid;
     padding: 10px;
     width: 150px;
     border-radius: 25px;

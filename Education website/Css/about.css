@@ -152,7 +152,7 @@ a
     --about-color:#ffe342;
 }
 .sub-header{
-    color:goldenrod;
+    color:#daa520;
     text-align: center;
     font-size: larger;
 }
@@ -271,20 +271,77 @@ a
 }
 
 /* instructors */
+#instructors{
+    margin: 10% 10% 7% 10%;
+}
 #instructors #content{
+    margin-top: 60px;
     display: flex;
     /* flex-wrap: wrap; */
-    justify-content: space-around;
+    /* align-items: center; */
+
+}
+.instructor-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 20vw;
+}
+.instructor-card div{
+    width: 80%;
+    position: relative;
 
 }
 .instructor-card img{
-    width: 15vw;
-    height: 15vw;
+    width: 100%;
+    aspect-ratio: 1/1;
     border-radius: 50%;
     outline: 1px pink dashed;
+    outline-offset: 6px;
 
 }
+.instructor-card .added-layer{
+    /* display: none; */
+    visibility: hidden;
+    width: 100%;
+    position: absolute;
+    aspect-ratio: 1/1;
+}
+.instructor-card div:hover .added-layer{
+    /* display: block; */
+    visibility: visible;
+}
+.instructor-card .layer{
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: auto;
+}
+.instructor-card .social-icons
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-40%,-30%);
+    padding: 0;
+}
+.instructor-card .social-icons i{
+    color: white;
+}
 
+.instructor-card h3{
+    margin: 0;
+}
+.instructor-card p{
+    margin: 5px;
+    text-align: center;
+}
+/* .instructor-card h3, #instructor-card p{
+    text-align: center;
+} */
 /* footer */
 #Contact
 {
