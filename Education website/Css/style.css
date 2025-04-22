@@ -288,7 +288,10 @@ section.courseCategorize{
     text-align: center;
 
 }
-
+.category-item a
+{
+text-decoration: none;
+}
 
 /* course */
 #Courses
