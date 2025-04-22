@@ -49,10 +49,10 @@
             }, 500);
         }
     
-        rightArrow.addEventListener("click", rotateLeft);
-        leftArrow.addEventListener("click", rotateRight);
+        // rightArrow.addEventListener("click", rotateLeft);
+        // leftArrow.addEventListener("click", rotateRight);
     
-        updateSlide(); // Initialize carousel correctly
+        // updateSlide(); // Initialize carousel correctly
     });
     
     
@@ -90,9 +90,13 @@
             });
         }, { threshold: 0.5 }); // Activates when 50% of the section is visible
     
-        observer.observe(statisticsSection);
+        // observer.observe(statisticsSection);
     });
     
+
+
+   
+  
 //  //Register &login
 //  const emailInput = document.getElementById("email");
 //  const passwordInput = document.getElementById("password");
@@ -246,10 +250,63 @@
 //     }
 // });
 
-
     
 }()
 );
+
+
+//2
+(
+    function(){
+        document.addEventListener("DOMContentLoaded", () => {      
+
+            // debugger;
+             var temp= document.querySelectorAll('.options')
+             temp.forEach(te=>
+                    {
+                        te.addEventListener('click',()=>
+                        {
+                            var split=te.id.split('-');
+                           
+                            var item=document.querySelectorAll('.op')
+        
+                            item.forEach(it=>
+                            {
+                                it.style.display='none';
+        
+                            }
+                            )
+        
+                        if(split[0]=='all')
+                            document.getElementById(split[0]).style.display='flex';
+                        else
+                            document.getElementById(split[0]).style.display='block';
+        
+                            
+        
+                        })
+        
+                    }
+           )
+        
+    })
+    }()
+);
+
+
+
+ //2
+//  (
+//     function()
+//     {
+       
+
+//     }
+// );
+
+
+
+
 
 
 
