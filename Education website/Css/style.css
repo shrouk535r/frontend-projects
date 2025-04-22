@@ -307,7 +307,7 @@ section.courseCategorize{
 {
     width: 100%;
 }
-.categoryBtn a
+.categoryBtn .explore-btn a
 {
 text-decoration: none;
 }
