@@ -292,7 +292,12 @@ section.courseCategorize{
 {
 text-decoration: none;
 }
-
+.categroies-content .categoryBtn
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 /* course */
 #Courses
 {
