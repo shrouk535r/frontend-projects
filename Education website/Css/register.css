@@ -1,5 +1,7 @@
 body{
     --about-color:#ffe342;
+       padding: 0px;
+    margin: 0px;
 }
 /* Nav */
 nav h1
