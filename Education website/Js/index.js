@@ -20,7 +20,7 @@
         var menulist=document.getElementById('menulist');
        
         if (window.location.pathname.includes("index.html")) {
-        if (scrollTop > about.offsetTop ) {
+        if (scrollTop > About.offsetTop ) {
             nav.style.backgroundColor = "black"; // Change background color to tomato
             nav.classList.add('shadow'); // Set boxShadow to none
             nav.classList.remove('nonshadow'); // Set boxShadow to none
