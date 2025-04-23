@@ -19,6 +19,7 @@ nav
     right: 0;
     justify-content: center;
 }
+
 .navContent
 {
     display: flex;
@@ -36,6 +37,7 @@ nav ul
     display: flex;
     list-style-type: none;
     align-content: end;
+    transition: all .5s;
 }
 
 nav ul li a {
@@ -43,7 +45,6 @@ nav ul li a {
     color: white;
     margin: 5px 25px;
     padding: 5px 0px;
-    transition: all 1s;
 }
 .navParent
 {
@@ -67,7 +68,10 @@ nav ul li a {
     opacity: 1;
     /* transform: translateX(20px); */
     left: 18px;
-    color: brown;
+}
+.account-buttons
+{
+    display: flex;
 }
 .account-buttons a{
     text-decoration: none;
@@ -78,15 +82,28 @@ nav ul li a {
     color: white;
     padding: 7px;
     border-width: 0px;
-    width: 6vw;
+    border: solid 1px white;
+    border-radius: 10px;
+    width: 80px
 }
 .account-buttons button:nth-child(2){
     border: 1px white solid;
+    width:80px;
     transform:translateX(5px);
     border-radius: 10px;
 }
 .account-buttons button:hover{
     opacity: 0.8;
+}
+.menu-icon
+{
+    display: none;
+
+}
+.menu-icon i
+{
+    color: white;
+    font-size: 30px;
 }
 /* home */
 .home
@@ -112,15 +129,16 @@ nav ul li a {
     font-size: 2.5rem;
     transform: translate(7vw,-10vh);
 }
-.layer h2::before{
-    content: "";
+.layer span{
     height: 70px;
     width: 3px;
-    background-color: var(--about-color);
-    display: inline-block;
-    transform: translate(-2vw,30%);
-}
+    margin-left: 40px;
+    margin-bottom: 20px;
 
+    background-color: var(--about-color);
+    margin-right: 10px;
+    /* transform: translate(-2vw,30%); */
+}
 /* form */
 .login-form{
     height: 60vh;
