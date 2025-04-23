@@ -22,6 +22,15 @@ nav
     left: 0;
     right: 0;
     justify-content: center;
+    transition: all .5s;
+}
+.shadow
+{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px !important;
+}
+.notshadow
+{
+    box-shadow: none;
 }
 .navContent
 {
@@ -39,6 +48,7 @@ nav ul
     display: flex;
     list-style-type: none;
     align-content: end;
+    transition: all .5s;
 }
 
 nav ul li a {
@@ -62,7 +72,7 @@ nav ul li a {
     bottom: -10px;
     left: 0px; 
     background-color: #ffe342; 
-    transition: all .1s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 .navParent a:hover::after 
 {
@@ -70,6 +80,11 @@ nav ul li a {
     /* transform: translateX(20px); */
     left: 18px;
     color: brown;
+}
+
+.account-buttons
+{
+    display: flex;
 }
 .account-buttons a{
     text-decoration: none;
@@ -80,15 +95,29 @@ nav ul li a {
     color: white;
     padding: 7px;
     border-width: 0px;
-    width: 6vw;
+    border: solid 1px white;
+    border-radius: 10px;
+    width: 80px
 }
 .account-buttons button:nth-child(2){
     border: 1px white solid;
+    width:80px;
     transform:translateX(5px);
     border-radius: 10px;
 }
 .account-buttons button:hover{
     opacity: 0.8;
+}
+
+.menu-icon
+{
+    display: none;
+
+}
+.menu-icon i
+{
+    color: white;
+    font-size: 30px;
 }
 /* Home */
 .home
