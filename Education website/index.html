@@ -43,14 +43,29 @@
             </div>
             </li>
         </ul>
+        <div id="account">
         <div class="account-buttons">
             <button ><a href="login.html">Sign in</a></button>
             <button ><a href="register.html">Sign up</a></button>
-
         </div>
+        <div id="myaccount">
+            <img class="img-acc" src="" alt="the image can't upload">
+            <div id="acount-desc">
+            <p class="name-acc"></p>
+            <p class="email-acc"></p>
+        </div>
+        </div>
+    </div>
     </div>
     </nav>
     <section id="Home" class="home">
+        <div class="account-card">
+            <img src="imgs/persons/unknown.png" alt="">
+            <p>shrouk</p>
+            <p>shrouk@mail.com</p>
+            <button id="view-profile">View profile</button>
+            <button id="signout">Sign out</button>
+        </div>
         <div class="layer">
             <h2 style="color: white;">Hello</h2>
         </div>
@@ -125,7 +140,7 @@
 
             <div class="category-item">
                 <div class="category-icon">
-                    <img src="../Education website/imgs/deeplearning.png">                
+                    <img src="imgs/deeplearning.png">                
                 </div>
                 <div class="category-desc">
                     <h3>Deep learning</h3>
@@ -140,7 +155,7 @@
             </div>
             <div class="category-item">
                 <div class="category-icon">
-                    <img src="../Education website/imgs/algorithm.png"> 
+                    <img src="imgs/algorithm.png"> 
                               </div>
                 <div class="category-desc">
                     <h3>Algorithm</h3>
@@ -154,7 +169,7 @@
             </div>            </div>
             <div class="category-item">
                 <div class="category-icon">
-                    <img src="../Education website/imgs/programming.png">     
+                    <img src="imgs/programming.png">     
                            </div>
                 <div class="category-desc">
                     <h3>Programming</h3>
@@ -169,7 +184,7 @@
             </div>
             <div class="category-item">
                 <div class="category-icon">
-                    <img src="../Education website/imgs/science.png">       
+                    <img src="imgs/science.png">       
                          </div>
                 <div class="category-desc">
                     <h3>science</h3>
@@ -355,11 +370,12 @@
     </div>
     </div>
 </div>
+<script  src="Js/index.js"></script>
+
     </footer>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-    <script src="Js/index.js"></script>
 </body>
 </html>

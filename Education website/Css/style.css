@@ -71,10 +71,94 @@ nav ul li a {
     left: 18px;
     color: brown;
 }
+
+/* acount-profile */
+#myaccount {
+    /* display: flex; */
+    display: none;
+    justify-items:flex-end;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+}
+#account{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#myaccount img{
+    height: 100%;
+    aspect-ratio: 1/1;
+    /* height: auto; */
+    border-radius: 50%;
+    margin-right: 10%;
+    cursor: pointer;
+
+}
+
+#acount-desc p:nth-child(1)
+{
+    color: white;
+    margin: 0;
+}
+#acount-desc p:nth-child(2)
+{
+    margin: 0px;
+    color: rgb(163, 163, 163);
+}
+
+/* account card */
+.account-card{
+    position: fixed;
+    /* display: flex; */
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background-color: white;
+    display: none;
+    z-index: 2;    
+}
+.show{
+    /* opacity: 1; */
+    display: flex;
+    animation: appear-bottom-right  0.5s ease forwards;
+}
+.hide{
+    /* opacity: 1; */
+    animation: hide-top-right  0.5s ease forwards;
+
+}
+@keyframes appear-bottom-right{
+    from{
+        opacity: 0;
+        transform: translate(100px,-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0,0);
+        
+    }
+}
+@keyframes hide-top-right{
+    from{
+        opacity: 1;
+        transform: translate(0,0);
+
+    }
+    to{
+        opacity: 0;
+        transform: translate(100px,-100px);
+
+        
+    }
+}
+
+/* account buttons */
 .account-buttons a{
     text-decoration: none;
     color: white;
 }
+
 .account-buttons button{
     background-color: transparent;
     color: white;

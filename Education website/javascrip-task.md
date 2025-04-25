@@ -6,7 +6,7 @@
   - [ ] enroll button
   - [ ] explore button(k2no 3ml check 3la el filter w show this category)
   - [ ] check categories
-  - [ ] local storage ll registered accounts [# shrouk]
+  - [ ] local storage ll registered accounts [#shrouk]
   - [ ] when u are loged in hide buttons of sign in /signup [#shrouk]
   - [ ] search about courses
   - [ ] after signin apear profile section in navbar [#shrouk]
