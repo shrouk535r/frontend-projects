@@ -1,9 +1,8 @@
-
-//1
-(function()
+//1    
+(
+    function()
 {
-
-
+   
   //Nav Change Color
     window.addEventListener("scroll", () => {
         var scrollTop = window.scrollY; // Get the current scroll position
@@ -156,6 +155,7 @@
     
     document.addEventListener("DOMContentLoaded", () => {
         const courseContainer = document.querySelector(".mainCourses");
+        
         const courseCards = Array.from(document.querySelectorAll(".CourseCard"));
         const rightArrow = document.querySelector(".secondCourseIcon");
         const leftArrow = document.querySelector(".firstCourseIcon");
@@ -200,11 +200,12 @@
                 courseContainer.style.transform = "translateX(0)";
             }, 500);
         }
-    
-         rightArrow.addEventListener("click", rotateLeft);
-         leftArrow.addEventListener("click", rotateRight);
-    
-         updateSlide(); // Initialize carousel correctly
+        if(rightArrow&&leftArrow&&updateSlide){
+            rightArrow.addEventListener("click", rotateLeft);
+            leftArrow.addEventListener("click", rotateRight);
+            updateSlide(); // Initialize carousel correctly
+        }
+
     });
     
     
@@ -241,65 +242,19 @@
                 }
             });
         }, { threshold: 0.5 }); // Activates when 50% of the section is visible
-    
-        observer.observe(statisticsSection);
+    if(statisticsSection)    
+       observer.observe(statisticsSection);
     });
     
 
 
    
   
-//  //Register &login
-
-
-
-//     let userList = JSON.parse(localStorage.getItem("userList")) || []; // Retrieve users from localStorage or initialize an empty array
-
-//     signupInput.addEventListener("click", (e) => {
-//         e.preventDefault(); // Prevent form submission
-//         const user = {
-//             name: userName.value.trim(),
-//             email: emailInput.value.trim(),
-//             password: passwordInput.value.trim(),
-//         };
-
-//         // Input validation
-//         if (validateInputs(user)) {
-//             // Check for duplicate email
-//             if (userList.some(u => u.email.toLowerCase() === user.email.toLowerCase())) {
-//                 alert("Email already exists. Please use another email."); // Show duplicate error
-//                 return;
-//             }
-
-//             userList.push(user); // Add new user to userList
-//             localStorage.setItem("userList", JSON.stringify(userList)); // Save updated userList to localStorage
-//             alert("Registration successful!");
-//             clearInputs(); // Clear form inputs
-//         } else {
-//             alert("Please fill out all fields correctly.");
-//         }
-//     });
-
-//     function validateInputs(user) {
-//         // Ensure all inputs are filled and passwords match
-//         return user.name && user.email && user.password && passwordConf.value === user.password;
-//     }
-
-//     function clearInputs() {
-//         // Clear all input fields
-//         userName.value = "";
-//         emailInput.value = "";
-//         passwordInput.value = "";
-//         passwordConf.value = "";
-//         document.getElementById("profile").value = "";
-//     }
-// });
-
-    
+ 
 }()
 );
 
-
+    
 //2
 (
     function(){
@@ -339,20 +294,371 @@
 );
 
 
-
- //2
-//  (
-//     function()
-//     {
-       
-
-//     }
-// );
+//3
+//login& register
+(
+    function()
+    {
+        let userList = JSON.parse(localStorage.getItem("userList")) || []; // Retrieve users from localStorage or initialize an empty array
 
 
+        document.addEventListener("DOMContentLoaded", () => {  
+            // setcookies("name","shrouk",1) 
+            const accountBtns = document.querySelector("#account .account-buttons");
+            const accountProfile = document.querySelector("#account #myaccount");
+            var signInUser=getcookies("signInUser")//to know if user sign in or not if ==null not sign in else return user-email
+            if(!signInUser){
+                if(accountProfile && accountBtns)
+                {
+                    accountBtns.style.display="block"
+                    accountProfile.style.display="none"
+                }
+            }
+            else
+            {
+    
+                if(accountProfile && accountBtns)
+                    {
+    
+                        accountBtns.style.display="none"
+                        accountProfile.style.display="flex"
+                        const accountName=accountProfile.querySelector(".name-acc")
+                        const accountEmail=accountProfile.querySelector(".email-acc")
+                        const accountImg=accountProfile.querySelector(".img-acc")
+                        var userInfo=JSON.parse(signInUser)
+                        console.log(userInfo);
+                        u=get_user_info(userInfo,userList)
+                        accountName.innerText=u.name
+                        accountEmail.innerText=u.email
+                        accountImg.src=u.profile
+
+    
+                }
+            }
+        })
+        //Register &login
+    
+    
+    
+        var signupInput=document.querySelector("#signup-btn")
+        var signinInput=document.querySelector("#signin-btn")
+        var userName=document.querySelector("#name")
+        var emailInput=document.querySelector("#email")
+        var passwordInput=document.querySelector("#password")
+        var passwordConf=document.querySelector("#re-password")
+        var profile_img=document.querySelector("#profile")
+
+        // register
+        if(signupInput)
+        {
+            signupInput.addEventListener("click", (e) => {
+                
+                e.preventDefault(); // Prevent form submission
+                const user = {
+                    name: userName.value.trim(),
+                    email: emailInput.value.trim(),
+                    password: passwordInput.value.trim(),
+                    profile: "imgs/persons/unknown.png"
+                };
+                console.log(user);
+                
+                // Input validation
+                if (validateInputs(user)) {
+                    
+                    // Check for duplicate email
+                    if (userList.some(u => u.email.toLowerCase() === user.email.toLowerCase())) {
+                        alert("Email already exists. Please use another email."); // Show duplicate error
+                        return;
+                    }
+                    //check for confirming password
+                    if(user.password!==passwordConf.value){
+                        alert("the passwords dosn't match")
+                        return
+                    }
+                    console.log(profile_img);
+                    
+                    if(profile_img.value)
+                    {
+                        var profile=profile_img.files[0]
+                        console.log("upload profile_img");
+                        console.log(profile.type);
+                        
+                        if(!profile.type.startsWith('image/'))
+                        {
+                            alert("please select an image file")
+                            return
+                        }
+                        else{
+                            const reader=new FileReader()
+                            reader.onload= function(d){
+                                debugger
+                                const base64Image=d.target.result;
+                                user.profile=base64Image;
+                                userList.push(user); // Add new user to userList
+                                localStorage.setItem("userList", JSON.stringify(userList)); // Save updated userList to localStorage
+                                setcookies("signInUser",JSON.stringify(user.email),1/2)
+                                // console.log("userin",getcookies('signInUser'))
+                
+                                alert("Registration successful!");
+                                
+                                clearInputs(); // Clear form inputs
+                                console.log(window.location.href);
+                                
+                                var returnTo=getreturnpage()
+
+                                window.location.href = returnTo
+                            };
+                            reader.readAsDataURL(profile);
+                            return
+
+                            
+                        }
+
+                    }
+                    else{
+                        userList.push(user); // Add new user to userList
+                        localStorage.setItem("userList", JSON.stringify(userList)); // Save updated userList to localStorage
+                        setcookies("signInUser",JSON.stringify(user.email),1)
+                        // console.log("userin",getcookies('signInUser'))
+        
+                        alert("Registration successful!");
+                        
+                        clearInputs(); // Clear form inputs
+                        console.log(window.location.href);
+                        
+                        var returnTo=getreturnpage()
+
+                        window.location.href = returnTo
+                        return
+
+                    }
+                    
+                } 
+                else
+                    alert("Please fill out all fields correctly.");
+            });
+    
+    
+    
+            
+        }
+
+        // login
+        if(signinInput)
+            {
+                signinInput.addEventListener("click", (e) => {
+                    let signned=false
+                    console.log("login clicked");
+                    
+                    e.preventDefault(); // Prevent form submission
+                    const registeredUser = {
+                        email: emailInput.value.trim(),
+                        password: passwordInput.value.trim(),
+                    };
+                    console.log(registeredUser);
+                    
+                    // Input validation
+                    //check correct email &pass    
+                    userList.forEach(u => {
+                        if(u.email.toLowerCase() === registeredUser.email.toLowerCase() && u.password===registeredUser.password) {
+                        setcookies("signInUser",JSON.stringify(u.email),1)
+                        console.log("userin",getcookies('signInUser'))
+                        alert("logined successful!");
+                        var returnTo=getreturnpage()
+                        signned=true
+                        window.location.href = returnTo
+                        return
+                    }
+                       
+                    });
+                    if(!signned)
+                    {
+                        emailInput.value="";
+                        passwordInput.value = "";
+                        alert("incrroct email or password");
+                    }
+
+                });
+        
+        
+        
+                
+            }
+
+        function getreturnpage(){
+            const params = new URLSearchParams(window.location.search);
+            return params.get('returnTo')||"index.html";
+        }
+        function validateInputs(user) {
+            // Ensure all inputs are filled and passwords match
+            
+            return user.name && user.email && user.password && validEmail(user);
+        }
+        function validEmail(user){
+            
+            return /\S+@\S+\.\S+/.test(user.email)
+        }
+        function clearInputs() {
+            // Clear all input fields
+            userName.value = "";
+            emailInput.value = "";
+            passwordInput.value = "";
+            passwordConf.value = "";
+            document.getElementById("profile").value = "";
+        }
+    }()
+);
+
+//4
+//redirect to main page
+(
+    function(){
+        signin_btn=document.querySelectorAll("a[href='login.html']")
+        signup_btn=document.querySelectorAll("a[href='register.html']")
+
+        
+        if(signin_btn)
+        {
+            signin_btn.forEach(x => {
+                x.addEventListener("click",function(e){
+
+                e.preventDefault();
+                if(window.location.pathname=="/register.html")
+                {
+                    const params = new URLSearchParams(window.location.search);
+                    const returnTo = params.get('returnTo')||"index.html";
+                    window.location.href = "login.html?returnTo="+returnTo
+                }
+                else
+                    window.location.href="login.html?returnTo="+window.location.pathname
+            });
+        });
+        }
+        if(signup_btn)
+        {
+            signup_btn.forEach(x=> {
+                x.addEventListener("click",function(e){
+                e.preventDefault();
+                
+                if(window.location.pathname=="/login.html"){
+                    const params = new URLSearchParams(window.location.search);
+                    const returnTo = params.get('returnTo')||"index.html";
+                    window.location.href = "register.html?returnTo="+returnTo
+                }
+                else
+                    window.location.href="register.html?returnTo="+window.location.pathname
+                });
+            });
+            console.log(window.location.href);
+            
+        }
+    }()
+);
+
+//5
+//account-card
+(
+    function(){
+        acc_card=document.querySelector(".account-card")
+        let userList = JSON.parse(localStorage.getItem("userList")) || []; // Retrieve users from localStorage or initialize an empty array
+        var signInUser=getcookies("signInUser")//to know if user sign in or not if ==null not sign in else return user-email
+
+        function accountcard(){
+
+            prof=document.querySelector("#account")
+            const profile_pos=prof.getBoundingClientRect()
+            console.log(profile_pos);
+            acc_card.style.top=profile_pos.bottom+10+"px"
+            acc_card.style.right=(window.innerWidth-profile_pos.right)-50+"px"
+            var card_name=acc_card.querySelector("#prof-name")
+            var card_email=acc_card.querySelector("#prof-email")
+            var card_img=acc_card.querySelector("img")
+            
+            if(signInUser){
+            var user=get_user_info(JSON.parse(signInUser),userList)
+            card_name.innerText=user.name
+            card_email.innerText=user.email
+            card_img.src=user.profile
+            }
+        }
+        if(acc_card){
+            var profile_btn=acc_card.querySelector("#view-profile")
+            var signOut_btn=acc_card.querySelector("#signout")
+            accountcard()
+            window.addEventListener('resize',()=>{console.log("resized");
+            accountcard()})
+            var prof_img=prof.querySelector("img")
+
+            prof_img.addEventListener("click",function(){
+                if(acc_card.classList.contains("show-account"))
+                {
+                    acc_card.classList.add("hide-account")
+                    setTimeout(()=>{
+                    acc_card.classList.remove("show-account","hide-account")
+                    },1000);
+                }
+                else{
+                    acc_card.classList.add("show-account")
+                }
+            });
+            window.addEventListener("scroll",function(){
+                if(acc_card.classList.contains("show-account"))
+                {
+                    acc_card.classList.add("hide-account")
+                    setTimeout(()=>{
+                    acc_card.classList.remove("show-account","hide-account")
+                    },1000);
+                }
+            });
+             
+            profile_btn.addEventListener("click",()=>window.location.href="profile.html")
+            signOut_btn.addEventListener("click",()=>{setcookies("signInUser","",1);window.location.reload()})
+        };
+    }()
+);
 
 
+//6
+//cookies
 
+function setcookies(name, value, expirationHours) {
+    const date = new Date();
+    date.setTime(date.getTime() + (expirationHours * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    console.log(expires);
+    console.log(name);
+    console.log(value);
+    
+    
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    // Note: You cannot restrict access to this file only via cookie settings.
+}
 
+function getcookies(searchedpropetry)
+{
+    var objects=document.cookie.split(";")
+    for(var object of objects)
+    {
+        var cookie=object.split("=")
+        var prop=cookie[0]
+        var value=cookie[1]
+        if(prop==searchedpropetry)
+        {
+            // console.log("is existing\n","propetry= "+prop+", value= "+value)
+            return value
+        }
+
+    }
+    return null
+}
 
   
+function get_user_info(user_mail,userList)
+{
+    var user={};
+    userList.forEach(u => {
+        if(u.email.toLowerCase() ===user_mail.toLowerCase() )
+            user=u;
+    });
+    return user
+}

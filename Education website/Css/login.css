@@ -71,32 +71,8 @@ nav ul li a {
     /* transform: translateX(20px); */
     left: 18px;
 }
-.account-buttons
-{
-    display: flex;
-}
-.account-buttons a{
-    text-decoration: none;
-    color: white;
-}
-.account-buttons button{
-    background-color: transparent;
-    color: white;
-    padding: 7px;
-    border-width: 0px;
-    border: solid 1px white;
-    border-radius: 10px;
-    width: 80px
-}
-.account-buttons button:nth-child(2){
-    border: 1px white solid;
-    width:80px;
-    transform:translateX(5px);
-    border-radius: 10px;
-}
-.account-buttons button:hover{
-    opacity: 0.8;
-}
+
+
 .menu-icon
 {
     display: none;
@@ -131,15 +107,13 @@ nav ul li a {
     font-size: 2.5rem;
     transform: translate(7vw,-10vh);
 }
-.layer span{
+.layer h2::before{
+    content: "";
     height: 70px;
     width: 3px;
-    margin-left: 40px;
-    margin-bottom: 20px;
-
     background-color: var(--about-color);
-    margin-right: 10px;
-    /* transform: translate(-2vw,30%); */
+    display: inline-block;
+    transform: translate(-2vw,30%);
 }
 /* form */
 .login-form{
@@ -170,7 +144,7 @@ nav ul li a {
 }
 .form-inputs{
     height: 20px;
-    width: 35vw;
+    width: 90%;
     border: 1px lightgrey solid;
     /* border: none; */
     /* transform: translateX(50%); */
