@@ -299,14 +299,14 @@
 (
     function()
     {
+        let userList = JSON.parse(localStorage.getItem("userList")) || []; // Retrieve users from localStorage or initialize an empty array
+
 
         document.addEventListener("DOMContentLoaded", () => {  
             // setcookies("name","shrouk",1) 
-            let userList = JSON.parse(localStorage.getItem("userList")) || []; // Retrieve users from localStorage or initialize an empty array
-    
             const accountBtns = document.querySelector("#account .account-buttons");
             const accountProfile = document.querySelector("#account #myaccount");
-            var signInUser=getcookies("signInUser")
+            var signInUser=getcookies("signInUser")//to know if user sign in or not if ==null not sign in else return user-info
             if(!signInUser){
                 if(accountProfile && accountBtns)
                 {
@@ -436,7 +436,8 @@
                     }
                     
                 } 
-                alert("Please fill out all fields correctly.");
+                else
+                    alert("Please fill out all fields correctly.");
             });
     
     
@@ -448,6 +449,7 @@
         if(signinInput)
             {
                 signinInput.addEventListener("click", (e) => {
+                    let signned=false
                     console.log("login clicked");
                     
                     e.preventDefault(); // Prevent form submission
@@ -460,20 +462,24 @@
                     // Input validation
                     //check correct email &pass    
                     userList.forEach(u => {
+                        debugger
                         if(u.email.toLowerCase() === registeredUser.email.toLowerCase() && u.password===registeredUser.password) {
                         setcookies("signInUser",JSON.stringify(u.email),1/12)
                         console.log("userin",getcookies('signInUser'))
                         alert("logined successful!");
                         var returnTo=getreturnpage()
-
+                        signned=true
                         window.location.href = returnTo
                         return
                     }
                        
                     });
-                    emailInput.value="";
-                    passwordInput.value = "";
-                    alert("incrroct email or password");
+                    if(!signned)
+                    {
+                        emailInput.value="";
+                        passwordInput.value = "";
+                        alert("incrroct email or password");
+                    }
 
                 });
         
@@ -556,32 +562,36 @@
 //account-card
 (
     function(){
+        acc_card=document.querySelector(".account-card")
+
         function accountcard(){
-            acc_card=document.querySelector(".account-card")
             prof=document.querySelector("#account")
             const profile_pos=prof.getBoundingClientRect()
             console.log(profile_pos);
         
             acc_card.style.top=profile_pos.bottom+10+"px"
-            acc_card.style.right=(window.innerWidth-profile_pos.right)+5+"px"
+            acc_card.style.right=(window.innerWidth-profile_pos.right)-50+"px"
         }
-        accountcard()
-        window.addEventListener('resize',()=>{console.log("resized");
-         accountcard()})
-
-         var prof_img=prof.querySelector("img")
-         prof_img.addEventListener("click",function(){
-            if(acc_card.classList.contains("show-account"))
-            {
-                acc_card.classList.add("hide-account")
-                setTimeout(()=>{
-                acc_card.classList.remove("show-account","hide-account")
-                },1000);
-            }
-            else{
-                acc_card.classList.add("show-account")
-            }
-         });
+        if(acc_card){
+            accountcard()
+            window.addEventListener('resize',()=>{console.log("resized");
+            accountcard()})
+            
+            var prof_img=prof.querySelector("img")
+            prof_img.addEventListener("click",function(){
+                
+                if(acc_card.classList.contains("show-account"))
+                {
+                    acc_card.classList.add("hide-account")
+                    setTimeout(()=>{
+                    acc_card.classList.remove("show-account","hide-account")
+                    },1000);
+                }
+                else{
+                    acc_card.classList.add("show-account")
+                }
+            });
+        };
     }()
 );
 

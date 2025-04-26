@@ -9,10 +9,6 @@ nav h1
 {
     color: white;
 }
-nav h1
-{
-    color: white;
-}
 
 nav
 {
@@ -94,7 +90,7 @@ nav ul li a {
     justify-items:flex-end;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    height: 80%;
     display: none;
 }
 #account{
@@ -103,11 +99,12 @@ nav ul li a {
     align-items: center;
 }
 #myaccount img{
-    height: 100%;
+    height: 75%;
     aspect-ratio: 1/1;
     /* height: auto; */
     border-radius: 50%;
     margin-right: 10%;
+    cursor: pointer;
 
 }
 
@@ -121,6 +118,54 @@ nav ul li a {
     margin: 0px;
     color: rgb(163, 163, 163);
 }
+
+
+/* account card */
+.account-card{
+    position: fixed;
+    /* display: flex; */
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background-color: white;
+    display: none;
+    z-index: 2;    
+}
+.show-account{
+    /* opacity: 1; */
+    display: flex;
+    animation: appear-bottom-right  0.5s ease forwards;
+}
+.hide-account{
+    /* opacity: 1; */
+    animation: hide-top-right  0.5s ease forwards;
+
+}
+@keyframes appear-bottom-right{
+    from{
+        opacity: 0;
+        transform: translate(100px,-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0,0);
+        
+    }
+}
+@keyframes hide-top-right{
+    from{
+        opacity: 1;
+        transform: translate(0,0);
+
+    }
+    to{
+        opacity: 0;
+        transform: translate(100px,-100px);
+
+        
+    }
+}
+
 .menu-icon
 {
     display: none;
@@ -149,7 +194,8 @@ nav ul li a {
     color: white;
     padding: 7px;
     border-width: 0px;
-    width: 6vw;
+    width: 6vw; border-radius: 10px;
+    width: 80px
 }
 .account-buttons button:nth-child(2){
     border: 1px white solid;
