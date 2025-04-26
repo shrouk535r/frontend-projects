@@ -1,3 +1,4 @@
+<!-- ======= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +7,10 @@
     <link rel="stylesheet" href="Css/course.css">
     <link rel="stylesheet" href="Css/all.min.css">
     <link rel="stylesheet" href="Css/media.css">
-    <title>Document</title>
+    <title>courses</title>
 </head>
 <body>
-   <nav id="navCourse">
+    <nav id="navCourse">
         <div class="navContent">
             <div >
                <a href="index.html"> <h1>E-learning</h1></a>
@@ -90,11 +91,11 @@
             </div>  
             <div class="mainCourses">
                 <div class="CourseCardPage">
-                    <img src="imgs/course1.jpg" alt="">
-                   <a href=""><h2>Keny White</h2></a> 
-                    <p>How To Create An Online Course</p>
+                    <img id="img1"src="imgs/course1.jpg" alt="">
+                   <a href=""><h2 >Keny White</h2></a> 
+                    <p id="name1">How To Create An Online Course</p>
                     <div class="btnCourse">
-                    <button><a href="login.html">Enroll</a></button>
+                    <button id="enroll1" class="enrolled-btn" data-check="false">Enroll</button>
                 </div>
                     <div class="mainFooter">
                     <div class="courseFooter">
@@ -109,11 +110,12 @@
                 </div>
                 </div>
                 <div class="CourseCardPage">
-                    <img src="imgs/course2.jpg" alt="">
-                   <a href=""><h2>Keny White</h2></a> 
-                    <p>How To Teach An Online Course</p>
+                    <img  id="img2"src="imgs/course2.jpg" alt="">
+                   <a href=""><h2 >Andrew Ng</h2></a> 
+                    <p id="name2">Computer Vision Tasks</p>
                     <div class="btnCourse">
-                        <button><a href="login.html">Enroll</a></button>
+                        <!-- <button id="enroll2" class="enrolled-btn"><a href="login.html">Enroll</a></button> -->
+                        <button id="enroll2" class="enrolled-btn" data-check="false">Enroll</button>
                     </div>
                     <div class="mainFooter">
                         <div class="courseFooter">
@@ -128,11 +130,12 @@
                     </div>
                 </div>
                 <div class="CourseCardPage">
-                    <img src="imgs/course3.jpg" alt="">
-                   <a href=""><h2>Keny White</h2></a> 
-                    <p>The Complete Online Teaching Masterclass</p>
+                    <img  id="img3"src="imgs/course3.jpg" alt="">
+                   <a href=""><h2 >FreeCodeCamp</h2></a> 
+                    <p id="name3">The Complete Online Teaching Masterclass</p>
                     <div class="btnCourse">
-                        <button><a href="login.html">Enroll</a></button>
+                        <!-- <button id="enroll3" class="enrolled-btn"><a href="login.html">Enroll</a></button> -->
+                        <button id="enroll3" class="enrolled-btn" data-check="false">Enroll</button>
                     </div>
                     <div class="mainFooter">
                         <div class="courseFooter">
@@ -147,11 +150,13 @@
                     </div>
                 </div>
                 <div class="CourseCardPage">
-                    <img src="imgs/course4.jpg" alt="">
-                   <a href=""><h2>Keny White</h2></a> 
-                    <p>Create an LMS Website with LearnPress</p>
+                    <img id="img4"src="imgs/course4.jpg" alt="">
+                   <a href=""><h2 >Barbara Liskov</h2></a> 
+                    <p id="name4">Create an LMS Website with LearnPress</p>
                     <div class="btnCourse">
-                        <button><a href="login.html">Enroll</a></button>
+                        <!-- <button id="enroll4" class="enrolled-btn"><a href="login.html">Enroll</a></button> -->
+                        <button id="enroll4" class="enrolled-btn" data-check="false">Enroll</button>
+
                     </div>
                     <div class="mainFooter">
                         <div class="courseFooter">
@@ -166,11 +171,13 @@
                     </div>
                 </div>
                 <div class="CourseCardPage">
-                    <img src="imgs/course4.jpg" alt="">
-                   <a href=""><h2>Keny White</h2></a> 
-                    <p>Create an LMS Website with LearnPress</p>
+                    <img id="img5" src="imgs/course4.jpg" alt="">
+                   <a href=""><h2 >David Malan</h2></a> 
+                    <p id="name5">Create Your Netwoek</p>
                     <div class="btnCourse">
-                        <button><a href="login.html">Enroll</a></button>
+                        <!-- <button id="enroll5" class="enrolled-btn"><a href="login.html">Enroll</a></button> -->
+                        <button id="enroll5" class="enrolled-btn" data-check="false">Enroll</a></button>
+
                     </div>
                     <div class="mainFooter">
                         <div class="courseFooter">
@@ -185,11 +192,12 @@
                     </div>
                 </div>
                 <div class="CourseCardPage">
-                    <img src="imgs/course4.jpg" alt="">
-                   <a href=""><h2>Keny White</h2></a> 
-                    <p>Create an LMS Website with LearnPress</p>
+                    <img id="img6"src="imgs/course4.jpg" alt="">
+                   <a href=""><h2 >Elzero</h2></a> 
+                    <p id="name6">Create your frontend project</p>
                     <div class="btnCourse">
-                        <button><a href="login.html">Enroll</a></button>
+                        <!-- <button id="enroll6" class="enrolled-btn"><a href="login.html">Enroll</a></button> -->
+                        <button id="enroll6" class="enrolled-btn" data-check="false">Enroll</button>
                     </div>
                     <div class="mainFooter">
                         <div class="courseFooter">
@@ -208,7 +216,7 @@
         <div class="Categories">
             <div class="categoryHead">
             <h2>Categories</h2>
-        </div>
+            </div>
            
             <div class="Options">
             <input type="checkbox" name="Photography" id="">
@@ -270,7 +278,9 @@
         </div>
     </section>
 
-        <script src="Js/index.js"></script>
+    <script src="Js/courses.js"></script>
+    <script src="Js/index.js"></script>
 
 </body>
 </html>
+<!-- >>>>>>> 2e387e9433b6976e297f296ba45707e768cb2eab -->

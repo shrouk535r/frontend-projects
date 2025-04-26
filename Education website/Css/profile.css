@@ -284,4 +284,290 @@ ul
     font-size: 14px;
 }
 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    height: 100%;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidebar .info
+{
+    /* display: flex; */
+    justify-content: center;
+    text-align: center;
+    
+
+}
+.sidebar .info-link{
+    display: inline;
+}
+.sidebar .list {
+    padding: 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #ccc;
+}
+
+.sidebar h1 {
+    color: #af704c;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+
+/* content */
+
+.content {
+    margin-left: 200px;
+    padding: 20px;
+   
+  
+}
+
+.content .info-courses
+{
+    display: flex;
+    width: 100%;
+    /* height:300px ; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.sub-courses
+{
+    width: 300px;
+    /* height: 100px; */
+    border: 2px solid #4c5157;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.courses-icon{
+    /* display: inline; */
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(156, 161, 161); 
+    border-radius: ; */
+
+}
+.info-course{
+    /* margin-left: 100px; */
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+    padding-top:10px ;
+    
+}
+.info-course p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin: auto;
+   
+} 
+
+
+
+#all
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul 
+{
+    margin: 0px;
+    display: flex;
+    list-style-type: none;
+    align-content: end;
+}
+
+ ul li a {
+    text-decoration: none;
+    color: white;
+    margin: 5px 25px;
+    padding: 5px 0px;
+}
+
+.complete-page
+{
+    margin-top:30px ;
+    margin-bottom: 10px;
+}
+.options
+{
+    display: inline;
+    font-weight: bold;
+    position: relative; 
+    
+}
+.options a{
+    font-size: 20px;
+    color: black;
+}
+
+.options a::after {
+    content: ""; 
+    opacity: 0;
+    width: 60%; 
+    height: 8%; 
+    position: absolute; 
+    bottom: -10px;
+    left: 0px; 
+    background-color: gold; 
+    transition: all .1s ease-in-out;
+}
+.options a:hover::after 
+{
+    opacity: 1;
+    /* transform: translateX(20px); */
+    left: 18px;
+    color: brown;
+}
+.mainCourses
+{
+    width: 100%;
+    margin-left: 200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.CourseCardPage
+{
+    width: 25%;
+    border: solid 1px rgb(238, 234, 234);
+    padding: 10px;
+    overflow: hidden;
+    margin: 5px 8px;
+    flex-wrap: wrap;
+}
+.CourseCardPage img
+{
+    width: 100%;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.CourseCardPage h2
+{
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+}
+.CourseCardPage p
+{
+    font-weight: 800;
+    font-size: 14px;
+    transition: all .3s;
+    text-align: center;
+}
+.CourseCardPage p:hover
+{
+    color: #ffe342;
+    cursor: pointer;
+}
+.CourseCardPage a
+{
+    text-decoration: none;   
+}
+.btnCourse
+{
+    display: flex;
+    justify-content: center;
+}
+.CourseCardPage a:hover
+{
+    text-decoration: underline;   
+}
+.CourseCardPage img:hover
+{
+    transform: scale(1.1);
+}
+.CourseCardPage  a
+{
+    color: #ffe342;
+    text-decoration: none;
+}
+.CourseCardPage  a:hover
+{
+    color: black;
+    text-decoration: none;
+}
+.CourseCardPage button
+{
+    background-color: transparent;
+    border: solid 2px #ffe342;
+    color: #ffe342;
+    font-weight: 300;
+    border-radius: 10px;
+    background-color: black;
+    cursor: pointer;
+    padding: 10px;
+    transition: all .3s;
+}
+.CourseCardPage button:hover
+{
+    background-color: #ffe342;
+    color: #333333;
+}
+
+.courseFooter
+{
+    display: flex;
+    align-items: center;
+    color: gray;
+}
+.courseFooter i
+{
+    padding-right: 5px;
+    padding-left: 10px;
+}
+.mainFooter
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Categories
+{
+    border: solid 1px gainsboro;
+    padding: 0px 50px;
+    margin: 50px 0px;
+}
+.categoryHead
+{
+    font-weight: 700;
+    color: #333333;
+    padding-bottom: 10px;
+    padding:10px 50px;
+}
+
+.Categories label
+{
+    color: #333333;
+    font-size: 14px;
+}
+
  
