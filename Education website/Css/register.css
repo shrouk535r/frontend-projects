@@ -1,5 +1,7 @@
 body{
     --about-color:#ffe342;
+       padding: 0px;
+    margin: 0px;
 }
 /* Nav */
 nav h1
@@ -8,16 +10,26 @@ nav h1
 }
 nav
 {
+    z-index: 5555;
     background-color: transparent;
     width: 100%;
-    margin-top: 10px;
-    height: 50px;
+    margin-top: 0px;
+    height: 70px;
     display: flex;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     justify-content: center;
+    transition: all .3s;
+}
+.shadow
+{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px !important;
+}
+.notshadow
+{
+    box-shadow: none;
 }
 .navContent
 {
@@ -32,18 +44,17 @@ nav
 }
 nav ul 
 {
-    margin: 0px;
     display: flex;
     list-style-type: none;
     align-content: end;
+    transition: all .5s;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-    margin: 5px 25px;
-    padding: 5px 0px;
-    transition: all 1s;
+    margin: 25px 25px;
+    padding: 15px 0px;
 }
 .navParent
 {
@@ -59,7 +70,7 @@ nav ul li a {
     position: absolute; 
     bottom: -10px;
     left: 0px; 
-    background-color: gold; 
+    background-color: #ffe342; 
     transition: all .1s ease-in-out;
 }
 .navParent a:hover::after 
@@ -69,53 +80,26 @@ nav ul li a {
     left: 18px;
     color: brown;
 }
-/* acount-profile */
-#myaccount {
-    /* display: flex; */
-    justify-items:flex-end;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    display: none;
-}
-#account{
-    height: 100%;
+.account-buttons
+{
     display: flex;
-    align-items: center;
-}
-#myaccount img{
-    height: 100%;
-    aspect-ratio: 1/1;
-    /* height: auto; */
-    border-radius: 50%;
-    margin-right: 10%;
-
-}
-
-#acount-desc p:nth-child(1)
-{
-    color: white;
-    margin: 0;
-}
-#acount-desc p:nth-child(2)
-{
-    margin: 0px;
-    color: rgb(163, 163, 163);
 }
 .account-buttons a{
     text-decoration: none;
     color: white;
 }
-
 .account-buttons button{
     background-color: transparent;
     color: white;
     padding: 7px;
     border-width: 0px;
-    width: 6vw;
+    border: solid 1px white;
+    border-radius: 10px;
+    width: 80px
 }
 .account-buttons button:nth-child(2){
     border: 1px white solid;
+    width:80px;
     transform:translateX(5px);
     border-radius: 10px;
 }
@@ -123,6 +107,16 @@ nav ul li a {
     opacity: 0.8;
 }
 
+.menu-icon
+{
+    display: none;
+
+}
+.menu-icon i
+{
+    color: white;
+    font-size: 30px;
+}
 /* home */
 .home
 {

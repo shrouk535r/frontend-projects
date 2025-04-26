@@ -1,80 +1,159 @@
-//0 
-//cookies
-function setcookies(name, value, expirationHours) {
-    const date = new Date();
-    date.setTime(date.getTime() + (expirationHours * 60 * 60 * 1000));
-    const expires = "expires=" + date.toUTCString();
-    console.log(expires);
-    console.log(name);
-    console.log(value);
-    
-    
-    document.cookie = name + "=" + value + ";" + expires + ";path=/";
-    // Note: You cannot restrict access to this file only via cookie settings.
-    }
-
-function getcookies(searchedpropetry)
-{
-    var objects=document.cookie.split(";")
-    for(var object of objects)
-    {
-        var cookie=object.split("=")
-        var prop=cookie[0]
-        var value=cookie[1]
-        if(prop==searchedpropetry)
-        {
-            // console.log("is existing\n","propetry= "+prop+", value= "+value)
-            return value
-        }
-
-    }
-    return null
-}
-
-
-
 //1    
 (
     function()
 {
-    document.addEventListener("DOMContentLoaded", () => {  
-        // setcookies("name","shrouk",1) 
-        let userList = JSON.parse(localStorage.getItem("userList")) || []; // Retrieve users from localStorage or initialize an empty array
-
-        const accountBtns = document.querySelector("#account .account-buttons");
-        const accountProfile = document.querySelector("#account #myaccount");
-        var signInUser=getcookies("signInUser")
-        if(!signInUser){
-            if(accountProfile && accountBtns)
-            {
-                accountBtns.style.display="block"
-                accountProfile.style.display="none"
+   
+  //Nav Change Color
+    window.addEventListener("scroll", () => {
+        var scrollTop = window.scrollY; // Get the current scroll position
+        var nav = document.getElementById("nav"); // Select the navbar element
+        var navCourse = document.getElementById("navCourse"); // Select the navbar element
+        var navAbout = document.getElementById("navAbout"); // Select the navbar element
+        var About = document.getElementById("About"); // Select the navbar element
+        var navRegister = document.getElementById("navRegister"); // Select the navbar element
+        var Register = document.getElementById("register"); // Select the navbar element
+        var iconUp = document.querySelector(".iconup"); // Optional: Fade-in/out icon element
+        var about=document.querySelector('#about');
+        var Courses=document.querySelector('#Courses');
+        var iconNav=document.getElementById('iconNav');
+        var menulist=document.getElementById('menulist');
+       
+        if (window.location.pathname.includes("index.html")) {
+        if (scrollTop > About.offsetTop ) {
+            nav.style.backgroundColor = "black"; // Change background color to tomato
+            nav.classList.add('shadow'); // Set boxShadow to none
+            nav.classList.remove('nonshadow'); // Set boxShadow to none
+            console.log("Scroll detected");
+    
+            // Fade-in effect for an icon (optional)
+            if (iconUp) {
+                iconUp.style.transition = "opacity 1s"; // Smooth transition
+                iconUp.style.opacity = "1";
+                iconUp.style.display = "block";
             }
+        } else {
+            nav.style.backgroundColor = "transparent"; // Change background color to black
+            nav.classList.add('nonshadow'); // Set boxShadow to none
+            nav.classList.remove('shadow'); // Set boxShadow to none
+            // Fade-out effect for an icon (optional)
+            if (iconUp) {
+                iconUp.style.transition = "opacity 1s";
+                iconUp.style.opacity = "0";
+                setTimeout(() => {
+                    iconUp.style.display = "none";
+                }, 1000); // Matches fade-out duration
+            }
+        }
+    }
+    if (window.location.pathname.includes("courses.html")) {
+        if (scrollTop>Courses.offsetTop-78) {
+            navCourse.style.backgroundColor = "black"; // Change background color to tomato
+            navCourse.classList.add('shadow'); // Set boxShadow to none
+            navCourse.classList.remove('nonshadow'); // Set boxShadow to none
+            //             console.log("Scroll detected");
+    
+            // Fade-in effect for an icon (optional)
+            if (iconUp) {
+                iconUp.style.transition = "opacity 1s"; // Smooth transition
+                iconUp.style.opacity = "1";
+                iconUp.style.display = "block";
+            }
+        } else {
+            navCourse.style.backgroundColor = "transparent"; // Change background color to black
+            navCourse.classList.add('nonshadow'); // Set boxShadow to none
+            navCourse.classList.remove('shadow'); // Set boxShadow to none
+            if (iconUp) {
+                iconUp.style.transition = "opacity 1s";
+                iconUp.style.opacity = "0";
+                setTimeout(() => {
+                    iconUp.style.display = "none";
+                }, 1000); // Matches fade-out duration
+            }
+        }
+    }
+    if (window.location.pathname.includes("about.html")) {
+        if (scrollTop>About.offsetTop-78) {
+            navAbout.style.backgroundColor = "black"; // Change background color to tomato
+            navAbout.classList.add('shadow'); // Set boxShadow to none
+            navAbout.classList.remove('nonshadow'); // Set boxShadow to none
+            //             console.log("Scroll detected");
+    
+            // Fade-in effect for an icon (optional)
+            if (iconUp) {
+                iconUp.style.transition = "opacity 1s"; // Smooth transition
+                iconUp.style.opacity = "1";
+                iconUp.style.display = "block";
+            }
+        } else {
+            navAbout.style.backgroundColor = "transparent"; // Change background color to black
+            navAbout.classList.add('nonshadow'); // Set boxShadow to none
+            navAbout.classList.remove('shadow'); // Set boxShadow to none
+            if (iconUp) {
+                iconUp.style.transition = "opacity 1s";
+                iconUp.style.opacity = "0";
+                setTimeout(() => {
+                    iconUp.style.display = "none";
+                }, 1000); // Matches fade-out duration
+            }
+        }
+    }
+    if (window.location.pathname.includes("register.html")) {
+        if (scrollTop>Register.offsetTop-75) {
+            navRegister.style.backgroundColor = "black"; // Change background color to tomato
+            navRegister.classList.add('shadow'); // Set boxShadow to none
+            navRegister.classList.remove('nonshadow'); // Set boxShadow to none
+              console.log("Scroll detected");
+    
+            // Fade-in effect for an icon (optional)
+            if (iconUp) {
+                iconUp.style.transition = "opacity 1s"; // Smooth transition
+                iconUp.style.opacity = "1";
+                iconUp.style.display = "block";
+            }
+        } else {
+            navRegister.style.backgroundColor = "transparent"; // Change background color to black
+            navRegister.classList.add('nonshadow'); // Set boxShadow to none
+            navRegister.classList.remove('shadow'); // Set boxShadow to none
+            if (iconUp) {
+                iconUp.style.transition = "opacity 1s";
+                iconUp.style.opacity = "0";
+                setTimeout(() => {
+                    iconUp.style.display = "none";
+                }, 1000); // Matches fade-out duration
+            }
+        }
+    }
+
+    });
+    //nav Responsive
+    iconNav.addEventListener('click',function(){
+        console.log('hello')
+        navIcon()
+
+    })
+
+    function navIcon()
+    {
+        if(menulist.classList.contains('appear'))
+        {
+            menulist.classList.remove('appear');
+            menulist.classList.add('hide');
+            menulist.style.maxHeight='0px'
         }
         else
         {
-
-            if(accountProfile && accountBtns)
-                {
-
-                    accountBtns.style.display="none"
-                    accountProfile.style.display="flex"
-                    const accountName=accountProfile.querySelector(".name-acc")
-                    const accountEmail=accountProfile.querySelector(".email-acc")
-                    const accountImg=accountProfile.querySelector(".img-acc")
-                    var userInfo=JSON.parse(signInUser)
-                    console.log(userInfo);
-                    userList.forEach(u => {
-                        if(u.email.toLowerCase() ===userInfo.toLowerCase() ) {
-                    accountName.innerText=u.name
-                    accountEmail.innerText=u.email
-                    accountImg.src=u.profile
-                    }
-                });
-
-                }
+            menulist.classList.add('appear');
+            menulist.style.maxHeight='300px'
+            
+        menulist.classList.remove('hide');
         }
-       
+    }
+
+    /*End Of Nav*/
+
+
+    
+    document.addEventListener("DOMContentLoaded", () => {
         const courseContainer = document.querySelector(".mainCourses");
         
         const courseCards = Array.from(document.querySelectorAll(".CourseCard"));
@@ -124,9 +203,9 @@ function getcookies(searchedpropetry)
         if(rightArrow&&leftArrow&&updateSlide){
             rightArrow.addEventListener("click", rotateLeft);
             leftArrow.addEventListener("click", rotateRight);
-    
             updateSlide(); // Initialize carousel correctly
         }
+
     });
     
     
@@ -163,8 +242,8 @@ function getcookies(searchedpropetry)
                 }
             });
         }, { threshold: 0.5 }); // Activates when 50% of the section is visible
-    if(statisticsSection)
-        observer.observe(statisticsSection);
+    if(statisticsSection)    
+       observer.observe(statisticsSection);
     });
     
 
@@ -220,11 +299,49 @@ function getcookies(searchedpropetry)
 (
     function()
     {
+
+        document.addEventListener("DOMContentLoaded", () => {  
+            // setcookies("name","shrouk",1) 
+            let userList = JSON.parse(localStorage.getItem("userList")) || []; // Retrieve users from localStorage or initialize an empty array
+    
+            const accountBtns = document.querySelector("#account .account-buttons");
+            const accountProfile = document.querySelector("#account #myaccount");
+            var signInUser=getcookies("signInUser")
+            if(!signInUser){
+                if(accountProfile && accountBtns)
+                {
+                    accountBtns.style.display="block"
+                    accountProfile.style.display="none"
+                }
+            }
+            else
+            {
+    
+                if(accountProfile && accountBtns)
+                    {
+    
+                        accountBtns.style.display="none"
+                        accountProfile.style.display="flex"
+                        const accountName=accountProfile.querySelector(".name-acc")
+                        const accountEmail=accountProfile.querySelector(".email-acc")
+                        const accountImg=accountProfile.querySelector(".img-acc")
+                        var userInfo=JSON.parse(signInUser)
+                        console.log(userInfo);
+                        userList.forEach(u => {
+                            if(u.email.toLowerCase() ===userInfo.toLowerCase() ) {
+                        accountName.innerText=u.name
+                        accountEmail.innerText=u.email
+                        accountImg.src=u.profile
+                        }
+                    });
+    
+                }
+            }
+        })
         //Register &login
     
     
     
-        let userList = JSON.parse(localStorage.getItem("userList")) || []; // Retrieve users from localStorage or initialize an empty array
         var signupInput=document.querySelector("#signup-btn")
         var signinInput=document.querySelector("#signin-btn")
         var userName=document.querySelector("#name")
@@ -454,23 +571,53 @@ function getcookies(searchedpropetry)
 
          var prof_img=prof.querySelector("img")
          prof_img.addEventListener("click",function(){
-            if(acc_card.classList.contains("show"))
+            if(acc_card.classList.contains("show-account"))
             {
-                acc_card.classList.add("hide")
+                acc_card.classList.add("hide-account")
                 setTimeout(()=>{
-                acc_card.classList.remove("show","hide")
+                acc_card.classList.remove("show-account","hide-account")
                 },1000);
             }
             else{
-                acc_card.classList.add("show")
+                acc_card.classList.add("show-account")
             }
          });
     }()
 );
 
 
+//6
+//cookies
 
+function setcookies(name, value, expirationHours) {
+    const date = new Date();
+    date.setTime(date.getTime() + (expirationHours * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    console.log(expires);
+    console.log(name);
+    console.log(value);
+    
+    
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    // Note: You cannot restrict access to this file only via cookie settings.
+}
 
+function getcookies(searchedpropetry)
+{
+    var objects=document.cookie.split(";")
+    for(var object of objects)
+    {
+        var cookie=object.split("=")
+        var prop=cookie[0]
+        var value=cookie[1]
+        if(prop==searchedpropetry)
+        {
+            // console.log("is existing\n","propetry= "+prop+", value= "+value)
+            return value
+        }
 
+    }
+    return null
+}
 
   

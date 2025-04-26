@@ -11,15 +11,15 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <nav>
+  <nav id="nav">
         <div class="navContent">
             <div >
                 <h1>E-learning</h1>
             </div>
-        <ul>
+        <ul id="menulist" class="hide">
             <li>
                 <div class="navParent">
-                <a href="#Home">Home</a>
+                <a href="index.html">Home</a>
             </div>
             </li>
             <li>
@@ -55,9 +55,18 @@
             <p class="email-acc"></p>
         </div>
         </div>
+        <div class="menu-icon" >
+            <i class="fa-solid fa-bars" id="iconNav"></i>
+        </div>
     </div>
     </div>
-    </nav>
+</nav>
+<!-- <<<<<<< HEAD
+    <section id="Home" class="home">
+  
+        <div class="layer">
+            <h2 style="color: white;">Hello</h2>
+======= -->
     <section id="Home" class="home">
         <div class="account-card">
             <img src="imgs/persons/unknown.png" alt="">
@@ -66,10 +75,41 @@
             <button id="view-profile">View profile</button>
             <button id="signout">Sign out</button>
         </div>
-        <div class="layer">
-            <h2 style="color: white;">Hello</h2>
+        <div class="carousel">
+            <div class="carousel-item firstBackImg">
+                <div class="overlay-gradient"></div>
+                <div class="slider-text-inner" >
+                    <div data-aos-once="true"  data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000">
+                        <h2>Elbert Hubbard</h2>
+                    <p>A little more persistence, a little more effort, and what seemed hopeless failure may turn to glorious success.</p>
+                        <button>Start Learning Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item secondBackImg">
+                <div class="overlay-gradient" data-aos-once="true"  data-aos="fade-up" data-aos-offset="200" data-aos-duration="1500"></div>
+                <div class="slider-text-inner" >
+                    <div data-aos-once="true"  data-aos="fade-up" data-aos-offset="200" data-aos-duration="15000">
+                        <h2>Albert Einstein</h2>
+                        <p>Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning.</p>
+                        <button>Start Learning Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item thirsBackImg">
+                <div class="overlay-gradient"></div>
+                <div class="slider-text-inner" >
+                    <div data-aos-once="true"  data-aos="fade-up" data-aos-offset="200" data-aos-duration="4000">
+                        <h2>Desmond Tutu</h2>
+                        <p>SHope is being able to see that there is light despite all of the darkness.</p>
+                        <button>Start Learning Now</button>
+                </div>
+                </div>
+            </div>
+<!-- >>>>>>> 2636df24493971b2a79b20d329d222198eae451c -->
         </div>
     </section>
+    
     <section id="About">
         <div id="about-header">
             <h2 >About Us</h2>

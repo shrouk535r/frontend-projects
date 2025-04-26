@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <link rel="stylesheet" href="Css/login.css">
+     <link rel="stylesheet" href="Css/all.min.css">
+    <link rel="stylesheet" href="Css/media.css">
 </head>
 <body>
-    <nav>
+     <nav>
         <div class="navContent">
-            <div >
+            <div>
                 <h1>E-learning</h1>
             </div>
-        <ul>
+        <ul id="menulist" class="hide">
             <li>
                 <div class="navParent">
                 <a href="index.html">Home</a>
@@ -30,20 +32,27 @@
             </li>
             <li>
                 <div  class="navParent">
-                <a href="#Testimonial">Reviews</a>
+                <a href="index.html">Reviews</a>
             </div>
             </li>
             <li>
                 <div  class="navParent">
-                <a href="#Contact">Contact</a>
+                <a href="index.html">Contact</a>
             </div>
             </li>
-        </ul>
-        
+            <li>
+                
+            </li>
+        </ul>        
+      
+        <div class="menu-icon" >
+            <i class="fa-solid fa-bars" id="iconNav"></i>
+        </div>
     </div>
     </nav>
     <section class="home">
         <div class="layer">
+                        <span></span>
             <h2 style="color: white;">Login</h2>
         </div>
     </section>
@@ -65,5 +74,6 @@
     </form>
     <script src="Js/index.js"></script>
    </section>
+        <script src="Js/index.js"></script>
 </body>
 </html>
