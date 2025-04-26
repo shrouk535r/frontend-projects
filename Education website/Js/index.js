@@ -418,7 +418,7 @@
                     else{
                         userList.push(user); // Add new user to userList
                         localStorage.setItem("userList", JSON.stringify(userList)); // Save updated userList to localStorage
-                        setcookies("signInUser",JSON.stringify(user.email),1/12)
+                        setcookies("signInUser",JSON.stringify(user.email),1)
                         // console.log("userin",getcookies('signInUser'))
         
                         alert("Registration successful!");
@@ -461,7 +461,7 @@
                     //check correct email &pass    
                     userList.forEach(u => {
                         if(u.email.toLowerCase() === registeredUser.email.toLowerCase() && u.password===registeredUser.password) {
-                        setcookies("signInUser",JSON.stringify(u.email),1/2)
+                        setcookies("signInUser",JSON.stringify(u.email),1)
                         console.log("userin",getcookies('signInUser'))
                         alert("logined successful!");
                         var returnTo=getreturnpage()
@@ -561,7 +561,7 @@
     function(){
         acc_card=document.querySelector(".account-card")
         let userList = JSON.parse(localStorage.getItem("userList")) || []; // Retrieve users from localStorage or initialize an empty array
-        var signInUser=JSON.parse(getcookies("signInUser"))//to know if user sign in or not if ==null not sign in else return user-email
+        var signInUser=getcookies("signInUser")//to know if user sign in or not if ==null not sign in else return user-email
 
         function accountcard(){
 
@@ -573,14 +573,17 @@
             var card_name=acc_card.querySelector("#prof-name")
             var card_email=acc_card.querySelector("#prof-email")
             var card_img=acc_card.querySelector("img")
-            var user=get_user_info(signInUser,userList)
+            
+            if(signInUser){
+            var user=get_user_info(JSON.parse(signInUser),userList)
             card_name.innerText=user.name
             card_email.innerText=user.email
             card_img.src=user.profile
-
+            }
         }
         if(acc_card){
-
+            var profile_btn=acc_card.querySelector("#view-profile")
+            var signOut_btn=acc_card.querySelector("#signout")
             accountcard()
             window.addEventListener('resize',()=>{console.log("resized");
             accountcard()})
@@ -598,6 +601,18 @@
                     acc_card.classList.add("show-account")
                 }
             });
+            window.addEventListener("scroll",function(){
+                if(acc_card.classList.contains("show-account"))
+                {
+                    acc_card.classList.add("hide-account")
+                    setTimeout(()=>{
+                    acc_card.classList.remove("show-account","hide-account")
+                    },1000);
+                }
+            });
+             
+            profile_btn.addEventListener("click",()=>window.location.href="profile.html")
+            signOut_btn.addEventListener("click",()=>{setcookies("signInUser","",1);window.location.reload()})
         };
     }()
 );
