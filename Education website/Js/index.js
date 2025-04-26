@@ -306,7 +306,7 @@
             // setcookies("name","shrouk",1) 
             const accountBtns = document.querySelector("#account .account-buttons");
             const accountProfile = document.querySelector("#account #myaccount");
-            var signInUser=getcookies("signInUser")//to know if user sign in or not if ==null not sign in else return user-info
+            var signInUser=getcookies("signInUser")//to know if user sign in or not if ==null not sign in else return user-email
             if(!signInUser){
                 if(accountProfile && accountBtns)
                 {
@@ -327,13 +327,11 @@
                         const accountImg=accountProfile.querySelector(".img-acc")
                         var userInfo=JSON.parse(signInUser)
                         console.log(userInfo);
-                        userList.forEach(u => {
-                            if(u.email.toLowerCase() ===userInfo.toLowerCase() ) {
+                        u=get_user_info(userInfo,userList)
                         accountName.innerText=u.name
                         accountEmail.innerText=u.email
                         accountImg.src=u.profile
-                        }
-                    });
+
     
                 }
             }
@@ -398,7 +396,7 @@
                                 user.profile=base64Image;
                                 userList.push(user); // Add new user to userList
                                 localStorage.setItem("userList", JSON.stringify(userList)); // Save updated userList to localStorage
-                                setcookies("signInUser",JSON.stringify(user.email),1/12)
+                                setcookies("signInUser",JSON.stringify(user.email),1/2)
                                 // console.log("userin",getcookies('signInUser'))
                 
                                 alert("Registration successful!");
@@ -462,9 +460,8 @@
                     // Input validation
                     //check correct email &pass    
                     userList.forEach(u => {
-                        debugger
                         if(u.email.toLowerCase() === registeredUser.email.toLowerCase() && u.password===registeredUser.password) {
-                        setcookies("signInUser",JSON.stringify(u.email),1/12)
+                        setcookies("signInUser",JSON.stringify(u.email),1/2)
                         console.log("userin",getcookies('signInUser'))
                         alert("logined successful!");
                         var returnTo=getreturnpage()
@@ -563,23 +560,33 @@
 (
     function(){
         acc_card=document.querySelector(".account-card")
+        let userList = JSON.parse(localStorage.getItem("userList")) || []; // Retrieve users from localStorage or initialize an empty array
+        var signInUser=JSON.parse(getcookies("signInUser"))//to know if user sign in or not if ==null not sign in else return user-email
 
         function accountcard(){
+
             prof=document.querySelector("#account")
             const profile_pos=prof.getBoundingClientRect()
             console.log(profile_pos);
-        
             acc_card.style.top=profile_pos.bottom+10+"px"
             acc_card.style.right=(window.innerWidth-profile_pos.right)-50+"px"
+            var card_name=acc_card.querySelector("#prof-name")
+            var card_email=acc_card.querySelector("#prof-email")
+            var card_img=acc_card.querySelector("img")
+            var user=get_user_info(signInUser,userList)
+            card_name.innerText=user.name
+            card_email.innerText=user.email
+            card_img.src=user.profile
+
         }
         if(acc_card){
+
             accountcard()
             window.addEventListener('resize',()=>{console.log("resized");
             accountcard()})
-            
             var prof_img=prof.querySelector("img")
+
             prof_img.addEventListener("click",function(){
-                
                 if(acc_card.classList.contains("show-account"))
                 {
                     acc_card.classList.add("hide-account")
@@ -631,3 +638,12 @@ function getcookies(searchedpropetry)
 }
 
   
+function get_user_info(user_mail,userList)
+{
+    var user={};
+    userList.forEach(u => {
+        if(u.email.toLowerCase() ===user_mail.toLowerCase() )
+            user=u;
+    });
+    return user
+}
