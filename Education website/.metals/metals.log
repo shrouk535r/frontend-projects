@@ -1,0 +1,23 @@
+2025.04.20 00:26:39 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at e:\Backend\frontend basics\projects\project1-iti\.metals\lsp.trace.json
+2025.04.20 00:26:58 ERROR Failed to get project directories
+java.util.concurrent.TimeoutException: Future timed out after [5 seconds]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait0(Promise.scala:248)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:261)
+	at scala.concurrent.Await$.$anonfun$result$1(package.scala:201)
+	at scala.concurrent.BlockContext$DefaultBlockContext$.blockOn(BlockContext.scala:62)
+	at scala.concurrent.Await$.result(package.scala:124)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.$anonfun$wrap$1(MetalsProjectDirectories.scala:43)
+	at scala.util.Try$.apply(Try.scala:217)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.wrap(MetalsProjectDirectories.scala:41)
+	at scala.meta.internal.metals.MetalsProjectDirectories$.fromPath(MetalsProjectDirectories.scala:34)
+	at scala.meta.internal.bsp.BspServers$.globalInstallDirectories(BspServers.scala:209)
+	at scala.meta.internal.metals.MetalsServerInputs$.productionConfiguration(MetalsServerInputs.scala:75)
+	at scala.meta.metals.MetalsLanguageServer$.$lessinit$greater$default$3(MetalsLanguageServer.scala:48)
+	at scala.meta.metals.Main$.main(Main.scala:52)
+	at scala.meta.metals.Main.main(Main.scala)
+
+2025.04.20 00:28:31 INFO  logging to files E:\Backend\frontend basics\projects\project1-iti\.metals\metals.log
+2025.04.20 00:28:31 INFO  Started: Metals version 1.5.2 in folders 'E:\Backend\frontend basics\projects\project1-iti' for client Visual Studio Code 1.99.2.
+2025.04.20 00:28:32 INFO  time: initialize in 0.4s
+2025.04.20 00:28:49 WARN  no build tool detected in workspace 'E:\Backend\frontend basics\projects\project1-iti'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.04.20 00:28:50 WARN  Build server is not auto-connectable.
