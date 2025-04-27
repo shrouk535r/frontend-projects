@@ -522,60 +522,66 @@ indicators.forEach((item, i) => {
     
 
 //Testimonial final
-var testim = document.getElementById("testim"),
-    testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
-    testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
-    testimleftArrow = document.getElementById("left-arrow"),
-    testimRightArrow = document.getElementById("right-arrow"),
-    testimSpeed = 4500,
-    currentSlide = 0,
-    currentActive = 0,
-    testimTimer
-    ;
-window.onload = function () {
+// if (window.location.pathname.includes("index.html"))
+//      {
+//         var testim = document.getElementById("testim");
 
-    // Testim Script
-    function playSlide(slide) {
-        for (var k = 0; k < testimDots.length; k++) {
-            testimContent[k].classList.remove("active");
-            testimContent[k].classList.remove("inactive");
-            testimDots[k].classList.remove("active");
-        }
-        if (slide < 0) {
-            slide = currentSlide = testimContent.length - 1;
-        }
-        if (slide > testimContent.length - 1) {
-            slide = currentSlide = 0;
-        }
-        if (currentActive != currentSlide) {
-            testimContent[currentActive].classList.add("inactive");
-        }
-        testimContent[slide].classList.add("active");
-        testimDots[slide].classList.add("active");
 
-        currentActive = currentSlide;
+//     testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
+//     testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
+//     testimleftArrow = document.getElementById("left-arrow"),
+//     testimRightArrow = document.getElementById("right-arrow"),
+//     testimSpeed = 4500,
+//     currentSlide = 0,
+//     currentActive = 0,
+//     testimTimer
+//     ;
 
-        clearTimeout(testimTimer);
-        testimTimer = setTimeout(function () {
-            playSlide(currentSlide += 1);
-        }, testimSpeed)
-    }
-    testimleftArrow.addEventListener("click", function () {
-        playSlide(currentSlide -= 1);
-    })
-    testimRightArrow.addEventListener("click", function () {
-        playSlide(currentSlide += 1);
-    })
+  
+// window.onload = function () {
 
-    for (var l = 0; l < testimDots.length; l++) {
-        testimDots[l].addEventListener("click", function () {
-            playSlide(currentSlide = testimDots.indexOf(this));
-        })
-    }
-    playSlide(currentSlide);
+//     // Testim Script
+//     function playSlide(slide) {
+//         for (var k = 0; k < testimDots.length; k++) {
+//             testimContent[k].classList.remove("active");
+//             testimContent[k].classList.remove("inactive");
+//             testimDots[k].classList.remove("active");
+//         }
+//         if (slide < 0) {
+//             slide = currentSlide = testimContent.length - 1;
+//         }
+//         if (slide > testimContent.length - 1) {
+//             slide = currentSlide = 0;
+//         }
+//         if (currentActive != currentSlide) {
+//             testimContent[currentActive].classList.add("inactive");
+//         }
+//         testimContent[slide].classList.add("active");
+//         testimDots[slide].classList.add("active");
 
-}
+//         currentActive = currentSlide;
 
+//         clearTimeout(testimTimer);
+//         testimTimer = setTimeout(function () {
+//             playSlide(currentSlide += 1);
+//         }, testimSpeed)
+//     }
+//     testimleftArrow.addEventListener("click", function () {
+//         playSlide(currentSlide -= 1);
+//     })
+//     testimRightArrow.addEventListener("click", function () {
+//         playSlide(currentSlide += 1);
+//     })
+
+//     for (var l = 0; l < testimDots.length; l++) {
+//         testimDots[l].addEventListener("click", function () {
+//             playSlide(currentSlide = testimDots.indexOf(this));
+//         })
+//     }
+//     playSlide(currentSlide);
+
+// }
+// }
 }()
 );
 
@@ -662,8 +668,7 @@ window.onload = function () {
             }
         })
         //Register &login
-    
-    
+
     
         var signupInput=document.querySelector("#signup-btn")
         var signinInput=document.querySelector("#signin-btn")
@@ -769,47 +774,9 @@ window.onload = function () {
         }
 
         // login
-        if(signinInput)
-            {
-                signinInput.addEventListener("click", (e) => {
-                    let signned=false
-                    console.log("login clicked");
-                    
-                    e.preventDefault(); // Prevent form submission
-                    const registeredUser = {
-                        email: emailInput.value.trim(),
-                        password: passwordInput.value.trim(),
-                    };
-                    console.log(registeredUser);
-                    
-                    // Input validation
-                    //check correct email &pass    
-                    userList.forEach(u => {
-                        if(u.email.toLowerCase() === registeredUser.email.toLowerCase() && u.password===registeredUser.password) {
-                        setcookies("signInUser",JSON.stringify(u.email),1)
-                        console.log("userin",getcookies('signInUser'))
-                        alert("logined successful!");
-                        var returnTo=getreturnpage()
-                        signned=true
-                        window.location.href = returnTo
-                        return
-                    }
-                       
-                    });
-                    if(!signned)
-                    {
-                        emailInput.value="";
-                        passwordInput.value = "";
-                        alert("incrroct email or password");
-                    }
-
-                });
         
-        
-        
-                
-            }
-
+        login(signinInput,userList)
+       
         function getreturnpage(){
             const params = new URLSearchParams(window.location.search);
             return params.get('returnTo')||"index.html";
@@ -831,6 +798,53 @@ window.onload = function () {
             passwordConf.value = "";
             document.getElementById("profile").value = "";
         }
+
+
+        function login(signinInput,userList)
+{
+    if(signinInput)
+        {
+            signinInput.addEventListener("click", (e) => {
+                let signned=false
+                console.log("login clicked");
+                
+                e.preventDefault(); // Prevent form submission
+                const registeredUser = {
+                    email: emailInput.value.trim(),
+                    password: passwordInput.value.trim(),
+                };
+                console.log(registeredUser);
+                
+                // Input validation
+                //check correct email &pass    
+                userList.forEach(u => {
+                    if(u.email.toLowerCase() === registeredUser.email.toLowerCase() && u.password===registeredUser.password) {
+                    setcookies("signInUser",JSON.stringify(u.email),1)
+                    console.log("userin",getcookies('signInUser'))
+                    alert("logined successful!");
+                    var returnTo=getreturnpage()
+                    signned=true
+                    window.location.href = returnTo
+                    return
+                }
+                   
+                });
+                if(!signned)
+                {
+                    emailInput.value="";
+                    passwordInput.value = "";
+                    alert("incrroct email or password");
+                }
+
+            });
+    
+    
+    
+            
+        }
+
+}
+
     }()
 );
 

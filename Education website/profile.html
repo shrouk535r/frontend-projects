@@ -28,137 +28,243 @@
     </style>
 </head>
 <body>
-
+  <div class="content">
     <div class="sidebar">
         <div class="info">
             <h1 class="info-text">Mariem Karam</h1>
             <h3 class="info-text">Software Engineer</i></h3>
-        <div class="sidebar-icons"><a class="info-link" href=""><i class="fa-brands fa-facebook-f fa-1x"></i></a>
-            <a class="info-link" href=""><i class="fa-regular fa-inbox"></i></a>
+            <a class="info-link" href=""><i class="fa-brands fa-facebook"></i></a>
+            <a class="info-link" href=""><i class="fa-brands fa-instagram"></i></a>
+            <a class="info-link" href=""><i class="fa-brands fa-x-twitter"></i></a>
             <a class="info-link" href=""><i class="fa-brands fa-linkedin-in"></i></a>
-            <a class="info-link" href=""><i class="fa-brands fa-github"></i></a>
-            </div>
         </div>
         <hr>
-        
-        <div class="side">
+        <div class="sidebarIcons">
+            <i class="fa-solid fa-hands-bound"></i>
             <a class="list" href="#">My Courses</a>
+        </div>
+        <div class="sidebarIcons">
+            <i class="fa-solid fa-award"></i>
             <a class="list" href="#">Certificates</a>
-            <a class="list" href="#">Gradebook</a>
+        </div>
+        <div class="sidebarIcons">
+            <i class="fa-solid fa-puzzle-piece"></i>
             <a class="list" href="#">Quizzes</a>
+        </div>
+        <div class="sidebarIcons">
+            <i class="fa-solid fa-bookmark"></i>
+          <a class="list" href="#">Gradebook</a>
+        </div>
+        <div class="sidebarIcons">
+            <i class="fa-solid fa-heart"></i>
             <a class="list" href="#">Wishlist</a>
+        </div>
+        <div class="sidebarIcons">
+            <i class="fa-solid fa-cart-shopping"></i>
             <a class="list" href="#">Orders</a>
-            <a class="list" href="#">Assignments</a>
+        </div>
+        <div class="sidebarIcons">
+        <i class="fa-solid fa-list-check"></i>
+        <a class="list" href="#">Assignments</a>
+    </div>
+        <div class="sidebarIcons">
+            <i class="fa-solid fa-gear"></i>
             <a class="list" href="#">Settings</a>
+        </div>
+        <div class="sidebarIcons">
+            <i class="fa-solid fa-right-from-bracket"></i>
             <a class="list" href="#">LogOut</a>
         </div>
-          
-        
     </div>
-
-    <div class="content">
+  
         <!-- <h2>Content</h2>
         <p>This is the main content of the page.</p> -->
-        <div class="info-courses">
-            <div class="sub-courses">
-                <div class="courses-icon">
-                    <i class="fa-brands fa-3x fa-facebook"></i>
-                </div>
-               <div class="info-course">
-                <p>My Courses</p>
-                <h2 id="enrolledNum">0</h2>
-               </div>
-            </div>
+        <div class="profileDetails">
 
-            <div class="sub-courses">
-                <div class="courses-icon">
-                    <i class="fa-brands fa-3x fa-facebook"></i>
-                </div>
-                <div class="info-course">
-                    <p>Inprograss Course</p>
-                    <h2 id="inprograssNum">0</h2>
+            <div class="info-courses">
+                <div class="sub-courses">
+                    <div class="courses-iconBook">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                   <div class="info-course">
+                    <p>Enrolled Course</p>
+                    <h2 id="enrolledNum">0</h2>
                    </div>
-            </div>
-
-            <div class="sub-courses">
-                <div class="courses-icon">
-                    <i class="fa-brands fa-3x fa-facebook"></i>
                 </div>
-                <div class="info-course">
-                    <p>Finished Course</p>
-                    <h2 id="finishedNum">0</h2>
-                   </div>
-            </div>
-
-            <div class="sub-courses">
-                <div class="courses-icon">
-                    <i class="fa-brands fa-3x fa-facebook"></i>
+    
+                <div class="sub-courses">
+                    <div class="courses-iconCourse">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+                    <div class="info-course">
+                        <p>Inprogress Course</p>
+                        <h2 id="inprograssNum">0</h2>
+                       </div>
                 </div>
-                <div class="info-course">
-                    <p>Passed Course</p>
-                    <h2 id="passedNum">0</h2>
-                   </div>
-            </div>
-
-            <div class="sub-courses">
-                <div class="courses-icon">
-                    <i class="fa-brands fa-3x fa-facebook"></i>
+    
+                <div class="sub-courses">
+                    <div class="courses-iconFinished">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                    </div>
+                    <div class="info-course">
+                        <p>Finished Course</p>
+                        <h2 id="finishedNum">0</h2>
+                       </div>
                 </div>
-                <div class="info-course">
-                    <p>Failed Course</p>
-                    <h2 id="failedNum">0</h2>
-                   </div>
-            </div>
-
-            <!-- <div class="sub-courses">
-                <div class="courses-icon">
-                    <i class="fa-brands fa-3x fa-facebook"></i>
+    
+                <div class="sub-courses">
+                    <div class="courses-iconPassed">
+                        <i class="fa-solid fa-file-pen"></i>
+                    </div>
+                    <div class="info-course">
+                        <p>Passed Course</p>
+                        <h2 id="passedNum">0</h2>
+                       </div>
                 </div>
-                <div class="info-course">
-                    <p>Total Course</p>
-                    <h2>8</h2>
-                   </div>
-            </div> -->
-        </div>
-
+    
+                <div class="sub-courses">
+                    <div class="courses-icon">
+                        <i class="fa-solid fa-file-excel"></i>
+                    </div>
+                    <div class="info-course">
+                        <p>Faild Course</p>
+                        <h2 id="failedNum">0</h2>
+                       </div>
+                </div>
 
         <div class="complete-page">
-        <ul>
-
-            <li>
-                <div class="options" id="mycourses-op">
-                    <a href="#mycourses">My Courses</a>
-                </div>
-            </li>
-
-            <li>
-                <div class="options" id="inprograss-op">
-                    <a href="#inprograss" >Inprograss </a>
-                </div>
-               
-            </li>
-            <li>
-                <div class="options" id="finished-op">
-                    <a href="#finished" >Finished</a>
-                </div>
-            </li>
-            <li>
-                <div class="options" id="passed-op">
-                    <a href="#passed" >Passed</a>
-                </div>
-            </li>
-            <li>
-                <div class="options" id="failed-op">
-                    <a href="#failed" >Faild</a>
-                </div>
-            </li>
+            <ul>
+    
+                <li>
+                    <div class="options" id="mycourses-op">
+                        <a href="#mycourses">My Courses</a>
+                    </div>
+                </li>
+    
+                <li>
+                    <div class="options" id="inprograss-op">
+                        <a href="#inprograss" >Inprograss </a>
+                    </div>
+                   
+                </li>
+                <li>
+                    <div class="options" id="finished-op">
+                        <a href="#finished" >Finished</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="options" id="passed-op">
+                        <a href="#passed" >Passed</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="options" id="failed-op">
+                        <a href="#failed" >Faild</a>
+                    </div>
+                </li>
+                
+            </ul> 
+            <hr>
+            </div>
+    
+    
             
-        </ul> 
+            <div id="mycourses" class="op" >
+                <!-- <p style="border: 1px solid grey; padding: 10px; border-radius: 5px;">No Courses avilable!</p> -->
+                <h2>My Courses List</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Name</th>
+                            <th>Result</th>
+                            <th>Exprition time</th>
+                            <th>End time</th>
+                            <th>Cancel</th>
+                        </tr>
+                    </thead>
+                    <tbody class="mycoursesList">
+    
+                    </tbody>
+        
+                </table>
+            </div>
+    
+            <div id="inprograss" class="op"  style="display: none;">
+                <!-- <p style="border: 1px solid grey; padding: 10px; border-radius: 5px;">No Courses avilable!</p> -->
+                <h2>Inprograss List</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Name</th>
+                            <th>Result</th>
+                            <th>Exprition time</th>
+                            <th>End time</th>
+                        </tr>
+                    </thead>
+                    <tbody class="inprograssList">
+    
+                    </tbody>
+        
+                </table>
+            </div>
+    
+            <div id="finished" class="op" style="display: none;">
+                <!-- <p style="border: 1px solid grey; padding: 10px; border-radius: 5px;">No Courses avilable!</p> -->
+                <h2>Finished List</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Name</th>
+                            <th>Result</th>
+                            <th>Exprition time</th>
+                            <th>End time</th>
+                        </tr>
+                    </thead>
+                    <tbody class="finishedList">
+    
+                    </tbody>
+        
+                </table>
+            </div>
+    
+            <div id="passed" class="op" style="display: none;">
+                <!-- <p style="border: 1px solid grey; padding: 10px; border-radius: 5px;">No Courses avilable!</p> -->
+                <h2>Passed List</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Name</th>
+                            <th>Result</th>
+                            <th>Exprition time</th>
+                            <th>End time</th>
+                        </tr>
+                    </thead>
+                    <tbody class="passedList">
+    
+                    </tbody>
+        
+                </table>
+            </div>
+            <div id="failed" class="op" style="display: none; ">
+                <p style="border: 1px solid grey; padding: 10px; border-radius: 5px;">No Courses avilable!</p>
+    
+            </div>    
+    
         </div>
+    </div>
+
+    
+    <script src="Js/profile.js"></script>
 
 
-        <hr>
+</body>
+</html>
 
+       
         <!-- <div id="all" class="op">
             <div class="CourseCardPage">
                 <img src="imgs/course1.jpg" alt="">
@@ -275,90 +381,7 @@
                 </div>
             </div>
         </div> -->
-        <div id="mycourses" class="op" >
-            <!-- <p style="border: 1px solid grey; padding: 10px; border-radius: 5px;">No Courses avilable!</p> -->
-            <h2>My Courses List</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Course</th>
-                        <th>Name</th>
-                        <th>Result</th>
-                        <th>Exprition time</th>
-                        <th>End time</th>
-                        <th>Cancel</th>
-                    </tr>
-                </thead>
-                <tbody class="mycoursesList">
-
-                </tbody>
-    
-            </table>
-        </div>
-
-        <div id="inprograss" class="op"  style="display: none;">
-            <!-- <p style="border: 1px solid grey; padding: 10px; border-radius: 5px;">No Courses avilable!</p> -->
-            <h2>Inprograss List</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Course</th>
-                        <th>Name</th>
-                        <th>Result</th>
-                        <th>Exprition time</th>
-                        <th>End time</th>
-                    </tr>
-                </thead>
-                <tbody class="inprograssList">
-
-                </tbody>
-    
-            </table>
-        </div>
-
-        <div id="finished" class="op" style="display: none;">
-            <!-- <p style="border: 1px solid grey; padding: 10px; border-radius: 5px;">No Courses avilable!</p> -->
-            <h2>Finished List</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Course</th>
-                        <th>Name</th>
-                        <th>Result</th>
-                        <th>Exprition time</th>
-                        <th>End time</th>
-                    </tr>
-                </thead>
-                <tbody class="finishedList">
-
-                </tbody>
-    
-            </table>
-        </div>
-
-        <div id="passed" class="op" style="display: none;">
-            <!-- <p style="border: 1px solid grey; padding: 10px; border-radius: 5px;">No Courses avilable!</p> -->
-            <h2>Passed List</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Course</th>
-                        <th>Name</th>
-                        <th>Result</th>
-                        <th>Exprition time</th>
-                        <th>End time</th>
-                    </tr>
-                </thead>
-                <tbody class="passedList">
-
-                </tbody>
-    
-            </table>
-        </div>
-        <div id="failed" class="op" style="display: none;">
-            <p style="border: 1px solid grey; padding: 10px; border-radius: 5px;">No Courses avilable!</p>
-
-        </div>
+        
 
 
         <!-- <div class="userList">
@@ -381,16 +404,3 @@
         </div> -->
     
       
-        </div>
-    </div>
-
-    
-    
-
-    
-    <!-- <script src="Js/index.js"></script> -->
-    <script src="Js/profile.js"></script>
-
-
-</body>
-</html>

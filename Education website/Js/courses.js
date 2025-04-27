@@ -1,10 +1,6 @@
 
 var enrolled_arr=[
-    {course:'../imgs/course1',name:'Data science', result:0,expiration:'November 27, 2023 5:46 am',end_time:'-'},
-    {course:'../imgs/course2',name:'Data engineer', result:0,expiration:'November 27, 2023 5:46 am',end_time:'-'},
-    {course:'../imgs/course3', name:'Data anylsis', result:0,expiration:'November 27, 2023 5:46 am',end_time:'-'},
-
-
+  {}
 ]
 //Global variables
 var CardButton;
@@ -12,26 +8,24 @@ var cardNum;
 var cardNamevar; 
 var ExpirationDate;
 var temp;
-// 
-// need to check in enroll is he loged in?
-// if true ->enroll
-// if false->go to sign in
-//return list of buttons
-var buttonChoiseed=document.querySelectorAll(".enrolled-btn");
 
-// console.log(buttonChoiseed)
+var buttonChoiseed=document.querySelectorAll(".enrolled-btn");
 
 buttonChoiseed.forEach(btn=>{
 
     btn.addEventListener(('click'),
     (event)=>{
 
-          //   //first check if signed in or not
-          //  var signedinCoockie= getcookies("signInUser");       
-          //  var user=get_user_info(JSON.parse(signInUser),userList)
-
-
-          
+           //first check if signed in or not
+           var signedinCoockie= getcookies("signInUser"); 
+           if (signedinCoockie) 
+            {
+              //  let data = JSON.parse(signedinCoockie);
+           console.log(signedinCoockie);   
+          //  let userList = JSON.parse(localStorage.getItem("userList")) || []; // Retrieve users from localStorage or initialize an empty array
+          //  console.log(userList);   
+          //  var user=get_user_info(JSON.parse(signedinCoockie),userList)
+                 
           CardButton= event.target.id;
           CardDataCheck=event.target.dataset.check;
           cardNum=CardButton[CardButton.length-1]
@@ -44,6 +38,10 @@ buttonChoiseed.forEach(btn=>{
             ExpirationDate=new Date();
       
            fillData()
+/////////////////////////////
+           
+           ///////////////////////////
+
            enrolled_arr.push(tempObject);
            tempObject={}
            localStorage.setItem("courseinfo",JSON.stringify(enrolled_arr));
@@ -85,15 +83,14 @@ buttonChoiseed.forEach(btn=>{
                 }
             })
             
-            
           }
-             
-        
+        }    
+      
+      else 
+        window.location.href = "login.html";
     })
 
 })
-
-
 
 
 
@@ -119,28 +116,8 @@ buttonChoiseed.forEach(btn=>{
 
 
 }
-function getcookies(searchedpropetry)
-{
-    var objects=document.cookie.split(";")
-    for(var object of objects)
-    {
-        var cookie=object.split("=")
-        var prop=cookie[0]
-        var value=cookie[1]
-        if(prop==searchedpropetry)
-        {
-            // console.log("is existing\n","propetry= "+prop+", value= "+value)
-            return value
-        }
-
-    }
-    return null
-}
-
-
 
 (function(){
-
 
   //when reload return enrolled courses
   var returnedCourses=JSON.parse(localStorage.getItem("courseinfo"));
@@ -167,8 +144,40 @@ function getcookies(searchedpropetry)
 enrolled_arr=[]
 enrolled_arr=returnedCourses;
 
-}())
+}()
+)
 
 
 
 
+// function getcookies(searchedpropetry)
+// {
+//     var objects=document.cookie.split(";")
+//     for(var object of objects)
+//     {
+//         var cookie=object.split("=")
+//         var prop=cookie[0]
+//         var value=cookie[1]
+//         if(prop==searchedpropetry)
+//         {
+//             // console.log("is existing\n","propetry= "+prop+", value= "+value)
+//             return value
+//         }
+
+//     }
+//     return null
+// }
+// function get_user_info(user_mail,userList)
+//            {
+//                var user={};
+//                userList.forEach(u => {
+//                    if(u.email.toLowerCase() ===user_mail.toLowerCase() )
+//                        user=u;
+//                });
+//                return user
+//            }
+
+
+// var userNotCourse=JSON.parse(localStorage.getItem("userList"));
+//  userNotCourse.push(enrolled_arr);
+//  localStorage.setItem("userList",JSON.stringify("userNotCourse"));
