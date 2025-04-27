@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Css/course.css">
+    <link rel="stylesheet" href="Css/style.css">
     <link rel="stylesheet" href="Css/all.min.css">
     <link rel="stylesheet" href="Css/media.css">
-    <title>courses</title>
+    <title>Document</title>
 </head>
 <body>
-    <nav id="navCourse">
+   <nav id="navCourse">
         <div class="navContent">
             <div >
                <a href="index.html"> <h1>E-learning</h1></a>
@@ -22,7 +23,7 @@
             </li>
             <li>
                 <div  class="navParent">
-                <a href="about.html">About</a>
+                <a href="index.html">About</a>
             </div>
             </li>
             <li>
@@ -42,24 +43,24 @@
             </li>
         </ul>
 
-<div id="account">
-    <div class="account-buttons">
-        <button ><a href="login.html">Sign in</a></button>
-        <button ><a href="register.html">Sign up</a></button>
-    </div>
-    <div id="myaccount">
-        <img class="img-acc" src="" alt="the image can't upload">
-        <div id="acount-desc">
-        <p class="name-acc"></p>
-        <p class="email-acc"></p>
-    </div>
-</div>
-</div>
-
-        <div class="menu-icon" >
-            <i class="fa-solid fa-bars" id="iconNav"></i>
+        <div id="account">
+            <div class="account-buttons">
+                <button ><a href="login.html">Sign in</a></button>
+                <button ><a href="register.html">Sign up</a></button>
+            </div>
+            <div id="myaccount">
+                <img class="img-acc" src="" alt="the image can't upload">
+                <div id="acount-desc">
+                <p class="name-acc"></p>
+                <p class="email-acc"></p>
+            </div>
         </div>
-</div>
+        </div>
+
+    <div class="menu-icon" >
+        <i class="fa-solid fa-bars" id="iconNav"></i>
+    </div>
+    </div>
     </nav>
     <section id="home">
         <div class="account-card">
@@ -86,16 +87,16 @@
         <div class="content">
             <div>
             <div class="contentHead">
-                <input type="search" placeholder="Search Our Courses">
+                <input type="search" placeholder="Search Our Courses" id="searchinput" onclick="search()">
             </div>  
-            <div class="mainCourses">
-                <div class="CourseCardPage">
-                    <img id="img1"src="imgs/course1.jpg" alt="">
-                   <a href=""><h2 >Keny White</h2></a> 
-                    <p id="name1">How To  Course</p>
+            <div class="mainCourses"id="courseCardPageId">
+                <div class="CourseCardPage" >
+                    <img id="img1" src="imgs/photography1.jpg" alt="">
+                   <a href=""><h2>Keny White</h2></a> 
+                    <p id="name1">Online Course Creation Secrets</p>
                     <div class="btnCourse">
-                    <button id="enroll1" class="enrolled-btn" data-check="false">Enroll</button>
-                </div>
+                        <button id="enroll1" class="enrolled-btn" data-check="false">Enroll</button>
+                    </div>
                     <div class="mainFooter">
                     <div class="courseFooter">
                         <i class="fa-solid fa-file-lines"></i>
@@ -109,11 +110,10 @@
                 </div>
                 </div>
                 <div class="CourseCardPage">
-                    <img  id="img2"src="imgs/course2.jpg" alt="">
-                   <a href=""><h2 >Andrew Ng</h2></a> 
-                    <p id="name2">Computer Vision </p>
+                    <img id="img2"src="imgs/photography2.jpg" alt="">
+                   <a href=""><h2>Keny White</h2></a> 
+                    <p id="name2">Become a Successful Online Teacher</p>
                     <div class="btnCourse">
-                        <!-- <button id="enroll2" class="enrolled-btn"><a href="login.html">Enroll</a></button> -->
                         <button id="enroll2" class="enrolled-btn" data-check="false">Enroll</button>
                     </div>
                     <div class="mainFooter">
@@ -129,11 +129,10 @@
                     </div>
                 </div>
                 <div class="CourseCardPage">
-                    <img  id="img3"src="imgs/course3.jpg" alt="">
-                   <a href=""><h2 >FreeCodeCamp</h2></a> 
-                    <p id="name3">The Complete Online Teaching Masterclass</p>
+                    <img id="img3" src="imgs/teacherTraining1.jpg" alt="">
+                   <a href=""><h2>Keny White</h2></a> 
+                    <p id="name3" >The Complete Online Teaching Masterclass</p>
                     <div class="btnCourse">
-                        <!-- <button id="enroll3" class="enrolled-btn"><a href="login.html">Enroll</a></button> -->
                         <button id="enroll3" class="enrolled-btn" data-check="false">Enroll</button>
                     </div>
                     <div class="mainFooter">
@@ -149,13 +148,11 @@
                     </div>
                 </div>
                 <div class="CourseCardPage">
-                    <img id="img4"src="imgs/course4.jpg" alt="">
-                   <a href=""><h2 >Barbara Liskov</h2></a> 
-                    <p id="name4">Create an LMS Website  LearnPress</p>
+                    <img id="img4"src="imgs/teacherTraining2.jpg" alt="">
+                   <a href=""><h2>Keny White</h2></a> 
+                    <p id="name4">How to Teach English Online and Get Paid</p>
                     <div class="btnCourse">
-                        <!-- <button id="enroll4" class="enrolled-btn"><a href="login.html">Enroll</a></button> -->
                         <button id="enroll4" class="enrolled-btn" data-check="false">Enroll</button>
-
                     </div>
                     <div class="mainFooter">
                         <div class="courseFooter">
@@ -172,7 +169,7 @@
                 <div class="CourseCardPage">
                     <img id="img5" src="imgs/course4.jpg" alt="">
                    <a href=""><h2 >David Malan</h2></a> 
-                    <p id="name5">Create Your Page</p>
+                    <p id="name5">Create Your </p>
                     <div class="btnCourse">
                         <button id="enroll5" class="enrolled-btn" data-check="false">Enroll</a></button>
                     </div>
@@ -188,12 +185,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="CourseCardPage">
-                    <img id="img6"src="imgs/course4.jpg" alt="">
-                   <a href=""><h2 >Elzero</h2></a> 
-                    <p id="name6">Create your frontend </p>
+                <div class="CourseCardPage" >
+                    <img id="img6" src="imgs/Coaching2.jpg" alt="">
+                   <a href=""><h2>Keny White</h2></a> 
+                    <p id="name6">Build a Six-Figure Online Business Selling Online Courses</p>
                     <div class="btnCourse">
-                        <!-- <button id="enroll6" class="enrolled-btn"><a href="login.html">Enroll</a></button> -->
                         <button id="enroll6" class="enrolled-btn" data-check="false">Enroll</button>
                     </div>
                     <div class="mainFooter">
@@ -211,41 +207,67 @@
             </div>
         </div>
         <div class="Categories">
+
             <div class="categoryHead">
             <h2>Categories</h2>
-            </div>
+        </div>
            
             <div class="Options">
-            <input type="checkbox" name="Photography" id="">
-            <label for="">Photography</label>
+                <div>
+            <input type="checkbox" name="Photography" id="photography">
+            <span >Photography</span>
+        </div>
+        <span>2</span>
+            
         </div>
         <div class="Options">
-            <input type="checkbox" name="Teacher Training" id="">
-            <label for="">Teacher Training</label>
+            <div>
+            <input type="checkbox" name="Teacher Training" id="teacherTraining">
+            <span for="">Teacher Training</span>
+        </div>
+        <span>2</span>
         </div>
         <div class="Options">
-            <input type="checkbox" name="Coaching" id="">
-            <label for="">Coaching</label>
+            <div>
+            <input type="checkbox" name="Coaching" id="coaching">
+            <span for="">Coaching</span>
+        </div>
+        <span>2</span>
         </div>
         <div class="Options">
-            <input type="checkbox" name="Online Business" id="">
-            <label for="">Online Business</label>
+            <div>
+            <input type="checkbox" name="onlineBusiness" id="onlineBusiness">
+            <span for="">Online Business</span>
+        </div>
+        <span>1</span>
         </div>
         <div class="Options">
-            <input type="checkbox" name="Technology" id="">
-            <label for="">Technology</label>
+            <div>
+            <input type="checkbox" name="technology" id="technology">
+            <span for="">Technology</span>
+        </div>
+        <span>3</span>
         </div>
         <div class="Options">
-            <input type="checkbox" name="Teaching Online" id="">
-            <label for="">Teaching Online</label>
+            <div>
+            <input type="checkbox" name="teachingOnline" id="teachingOnline">
+            <span for="">Teaching Online</span>
+        </div>
+        <span>4</span>
         </div>
         <div class="Options">
-            <input type="checkbox" name="Video Creation" id="">
-            <label for="">Video Creation</label>
+            <div>
+            <input type="checkbox" name="videoCreation" id="videoCreation">
+            <span for="">Video Creation</span>
+        </div>
+        <span>3</span>
         </div>
         <div class="Options">
-            <input type="checkbox" name="Teaching Online" id="">
-            <label for="">Passive Income</label>
+            <div>
+            <input type="checkbox" name="PassiveIncome" id="passiveIncome">
+            <span for="">Passive Income</span>
+        </div>
+        <span>2</span>
         </div>
         <div class="categoryHead">
             <h2>Author</h2>
@@ -258,7 +280,7 @@
             <h2>Price</h2>
         </div>
         <div class="Options">
-            <input type="checkbox" name="Free" id="">
+            <input type="checkbox" name="free" id="free">
             <label for="">Free</label>
         </div>
         <div class="Options">
@@ -274,9 +296,8 @@
         </div>
         </div>
     </section>
-
     <script src="Js/courses.js"></script>
-    <script src="Js/index.js"></script>
 
+    <script src="Js/index.js"></script>
 </body>
 </html>
