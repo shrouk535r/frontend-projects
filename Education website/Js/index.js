@@ -959,7 +959,7 @@ function getcookies(searchedpropetry)
     for(var object of objects)
     {
         var cookie=object.split("=")
-        var prop=cookie[0]
+        var prop=cookie[0].trim()
         var value=cookie[1]
         if(prop==searchedpropetry)
         {
