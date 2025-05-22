@@ -1,0 +1,209 @@
+body{
+    --about-color:#ffe342;
+       padding: 0px;
+    margin: 0px;
+}
+/* Nav */
+nav h1
+{
+    color: white;
+}
+nav
+{
+    z-index: 5555;
+    background-color: transparent;
+    width: 100%;
+    margin-top: 0px;
+    height: 70px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    transition: all .3s;
+}
+.shadow
+{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px !important;
+}
+.notshadow
+{
+    box-shadow: none;
+}
+.navContent
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.head
+{
+    width: 25%;
+}
+nav ul 
+{
+    display: flex;
+    list-style-type: none;
+    align-content: end;
+    transition: all .5s;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    margin: 25px 25px;
+    padding: 15px 0px;
+}
+.navParent
+{
+    position: relative; 
+    /* overflow: hidden; */
+}
+
+.navParent a::after {
+    content: ""; 
+    opacity: 0;
+    width: 60%; 
+    height: 8%; 
+    position: absolute; 
+    bottom: -10px;
+    left: 0px; 
+    background-color: #ffe342; 
+    transition: all .1s ease-in-out;
+}
+.navParent a:hover::after 
+{
+    opacity: 1;
+    /* transform: translateX(20px); */
+    left: 18px;
+    color: brown;
+}
+.account-buttons
+{
+    display: flex;
+}
+.account-buttons a{
+    text-decoration: none;
+    color: white;
+}
+.account-buttons button{
+    background-color: transparent;
+    color: white;
+    padding: 7px;
+    border-width: 0px;
+    border: solid 1px white;
+    border-radius: 10px;
+    width: 80px
+}
+.account-buttons button:nth-child(2){
+    border: 1px white solid;
+    width:80px;
+    transform:translateX(5px);
+    border-radius: 10px;
+}
+.account-buttons button:hover{
+    opacity: 0.8;
+}
+.menu-icon
+{
+    display: none;
+
+}
+.menu-icon i
+{
+    color: white;
+    font-size: 30px;
+}
+/* home */
+.home
+{
+    background-image: url(../imgs/Home.jpeg);
+    background-position: center center;
+    background-size:  cover;
+    height: 50vh;
+    margin-bottom: 20px;
+}
+
+.layer
+{
+    width: 100%;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.layer h2{
+    font-size: 2.5rem;
+    transform: translate(7vw,-10vh);
+}
+.layer h2::before{
+    content: "";
+    height: 70px;
+    width: 3px;
+    background-color: var(--about-color);
+    display: inline-block;
+    transform: translate(-2vw,30%);
+}
+
+/* form */
+.register-form{
+    height: 90vh;
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    background-color: whitesmoke;
+}
+.register-form h2{
+    text-align: center;
+    transform: translateY(60%);
+    margin: 30px;
+}
+.register-form label{
+    text-align: left;
+    transform: translateX(0.5vw);
+    display: inline-block;
+}
+.register-form label:not(label[for="profile"])::after{
+    content: " *";
+    color: rgb(201, 0, 0);
+}
+.register-form div{
+    margin: 10px;
+}
+.form-inputs{
+    height: 20px;
+    width: 90%;
+    border: 1px lightgrey solid;
+    /* border: none; */
+    /* transform: translateX(50%); */
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+}
+.register-form button[type="submit"]{
+    display: inline-block;
+    margin: 10px;
+    width: 37vw;
+    height: 40px;
+    font-weight: 600;
+    background-color: rgb(255, 217, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.login-form button[type="submit"]:hover{
+    opacity: 0.8;
+}
+.register-form p{
+    transform: translateX(3%);
+}
+.register-form #login a{
+    color: rgb(207, 177, 2);
+}
