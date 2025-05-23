@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 body
 {
     /* background: linear-gradient(120deg, #f093fb, #f5576c);  */
@@ -492,9 +491,7 @@ nav ul li a {
 
 
 /*categories section*/
-#categories
-{
-}
+
 section.courseCategorize{
 	/* width: 100%; */
 	padding: 50px 50px 20px;
@@ -1005,74 +1002,6 @@ border-color: #ea830e;
 }
 .testim .cont div.active p {
     animation: testim-content-in .5s ease-in-out forwards;
-<<<<<<< HEAD
-=======
-}
-.testim .cont div.inactive .img img{
-    animation: testim-hide .5s ease-in-out forwards;
-}
-.testim .cont div.inactive h2{
-    animation: testim-content-out .4s ease-in-out forwards;
-}
-.testim .cont div.inactive p {
-    animation: testim-content-out .5s ease-in-out forwards;
-}
-
-@keyframes testim-scale {
-    0% {
-        box-shadow: 0px 0px 0px 0px #eee;
-    }
-    35% {
-        box-shadow: 0px 0px 10px 5px #eee;
-    }
-    70% {
-        box-shadow: 0px 0px 10px 5px #ea830e;
-    }
-    100% {
-        box-shadow: 0px 0px 0px 0px #ea830e;
-    }
-}
-
-@keyframes testim-content-in {
-    from {
-        opacity: 0;
-        transform: translateY(100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@keyframes testim-content-out {
-    from {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateY(-100%);
-    }
-}
-@keyframes testim-show {
-    from {
-        opacity: 0;
-        transform: scale(0);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-@keyframes testim-hide {
-    from {
-        opacity: 1;
-        transform: scale(1);
-    }
-    to {
-        opacity: 0;
-        transform: scale(0);
-    }
->>>>>>> 08bc3cdfeed5bd61b1b328b649e6266e5dc8c09b
 }
 .testim .cont div.inactive .img img{
     animation: testim-hide .5s ease-in-out forwards;
@@ -1188,7 +1117,6 @@ border-color: #ea830e;
 {
     color:rgb(200, 171, 26) ;
 }
-=======
 body
 {
     /* background: linear-gradient(120deg, #f093fb, #f5576c);  */
@@ -1681,9 +1609,7 @@ nav ul li a {
 
 
 /*categories section*/
-#categories
-{
-}
+
 section.courseCategorize{
 	/* width: 100%; */
 	padding: 50px 50px 20px;
@@ -2416,4 +2342,3 @@ footer .Copyright{
     width: 90%;
     margin: auto; 
 }
->>>>>>> 91e6d9b6b5fc7b62b9118cb4cec33b5fc96778ed

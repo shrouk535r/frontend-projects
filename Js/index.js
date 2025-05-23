@@ -8,15 +8,10 @@
         var scrollTop = window.scrollY; 
         var nav = document.getElementById("nav"); 
         var navCourse = document.getElementById("navCourse"); 
-<<<<<<< HEAD
         var navAbout = document.getElementById("navAbout"); 
-        var About = document.getElementById("About"); 
-        var navRegister = document.getElementById("navRegister");
-=======
-        var navAbout = document.getElementById("navAbout");
+
         var About = document.getElementById("About"); 
         var navRegister = document.getElementById("navRegister"); 
->>>>>>> 91e6d9b6b5fc7b62b9118cb4cec33b5fc96778ed
         var Register = document.getElementById("register"); 
         var iconUp = document.querySelector(".iconup"); 
         var about=document.querySelector('#about');
@@ -28,20 +23,11 @@
         if (scrollTop > About.offsetTop ) {
             nav.style.backgroundColor = "black"; 
             nav.classList.add('shadow'); 
-<<<<<<< HEAD
             nav.classList.remove('nonshadow');
             console.log("Scroll detected");
     
             if (iconUp) {
                 iconUp.style.transition = "opacity 1s";
-=======
-            nav.classList.remove('nonshadow'); 
-            console.log("Scroll detected");
-    
-          
-            if (iconUp) {
-                iconUp.style.transition = "opacity 1s"; 
->>>>>>> 91e6d9b6b5fc7b62b9118cb4cec33b5fc96778ed
                 iconUp.style.opacity = "1";
                 iconUp.style.display = "block";
             }
@@ -63,10 +49,7 @@
             navCourse.style.backgroundColor = "black"; 
             navCourse.classList.add('shadow'); 
             navCourse.classList.remove('nonshadow'); 
-<<<<<<< HEAD
           
-=======
->>>>>>> 91e6d9b6b5fc7b62b9118cb4cec33b5fc96778ed
     
             if (iconUp) {
                 iconUp.style.transition = "opacity 1s"; 
@@ -82,11 +65,7 @@
                 iconUp.style.opacity = "0";
                 setTimeout(() => {
                     iconUp.style.display = "none";
-<<<<<<< HEAD
                 }, 1000);
-=======
-                }, 1000); 
->>>>>>> 91e6d9b6b5fc7b62b9118cb4cec33b5fc96778ed
             }
         }
     }
@@ -94,13 +73,8 @@
         if (scrollTop>About.offsetTop-78) {
             navAbout.style.backgroundColor = "black"; 
             navAbout.classList.add('shadow'); 
-<<<<<<< HEAD
             navAbout.classList.remove('nonshadow'); 
     
-=======
-            navAbout.classList.remove('nonshadow');
-            
->>>>>>> 91e6d9b6b5fc7b62b9118cb4cec33b5fc96778ed
             if (iconUp) {
                 iconUp.style.transition = "opacity 1s"; 
                 iconUp.style.opacity = "1";
@@ -126,35 +100,21 @@
             navRegister.classList.remove('nonshadow'); 
               console.log("Scroll detected");
     
-<<<<<<< HEAD
             if (iconUp) {
                 iconUp.style.transition = "opacity 1s";
-=======
-          
-            if (iconUp) {
-                iconUp.style.transition = "opacity 1s"; 
->>>>>>> 91e6d9b6b5fc7b62b9118cb4cec33b5fc96778ed
                 iconUp.style.opacity = "1";
                 iconUp.style.display = "block";
             }
         } else {
             navRegister.style.backgroundColor = "transparent"; 
             navRegister.classList.add('nonshadow'); 
-<<<<<<< HEAD
             navRegister.classList.remove('shadow');
-=======
-            navRegister.classList.remove('shadow'); 
->>>>>>> 91e6d9b6b5fc7b62b9118cb4cec33b5fc96778ed
             if (iconUp) {
                 iconUp.style.transition = "opacity 1s";
                 iconUp.style.opacity = "0";
                 setTimeout(() => {
                     iconUp.style.display = "none";
-<<<<<<< HEAD
                 }, 1000);
-=======
-                }, 1000); 
->>>>>>> 91e6d9b6b5fc7b62b9118cb4cec33b5fc96778ed
             }
         }
     }
@@ -196,7 +156,6 @@
     
         const visibleCards = 4; // Number of visible cards at a time
     
-<<<<<<< HEAD
         function updateSlide() {
             courseContainer.innerHTML = ""; // Clear previous order
             courseCards.forEach((card, index) => {
@@ -214,23 +173,6 @@
         function rotateRight() {
             courseContainer.style.transition = "transform 0.5s ease-in-out";
             // courseContainer.style.transform = "translateX(-25%)"; // Slide left
-=======
-    //     const visibleCards = 4; 
-    
-    //     function updateSlide() {
-    //         courseContainer.innerHTML = ""; 
-    //         courseCards.forEach((card, index) => {
-    //             if (index < visibleCards) {
-    //                 card.style.display = "block"; 
-    //                 card.style.opacity = "1";
-    //             } else {
-    //                 card.style.display = "none";
-    //                 card.style.opacity = "0";
-    //             }
-    //             courseContainer.appendChild(card); 
-    //         });
-    //     }
->>>>>>> 91e6d9b6b5fc7b62b9118cb4cec33b5fc96778ed
     
             setTimeout(() => {
                 const hiddenCard = courseCards[visibleCards]; // Get the hidden card
@@ -256,17 +198,9 @@
          rightArrow.addEventListener("click", rotateLeft);
          leftArrow.addEventListener("click", rotateRight);
     
-<<<<<<< HEAD
          updateSlide(); // Initialize carousel correctly
     });
 }
-=======
-    //     //  rightArrow.addEventListener("click", rotateLeft);
-    //     //  leftArrow.addEventListener("click", rotateRight);
-    
-    //      updateSlide(); // Initialize carousel correctly
-    // });
->>>>>>> 91e6d9b6b5fc7b62b9118cb4cec33b5fc96778ed
     
     
     
@@ -279,18 +213,13 @@
         function updateCounter(counter) {
             let targetNumber = parseInt(counter.innerText);
             let currentNumber = 0;
-<<<<<<< HEAD
             let increment = Math.ceil(targetNumber / 100); // Speed adjustment
-=======
-            let increment = Math.ceil(targetNumber / 100);
->>>>>>> 91e6d9b6b5fc7b62b9118cb4cec33b5fc96778ed
     
             function animate() {
                 if (currentNumber < targetNumber) {
                     currentNumber += increment;
                     if (currentNumber > targetNumber) currentNumber = targetNumber; // Prevent overshoot
                     counter.innerText = currentNumber;
-<<<<<<< HEAD
                     setTimeout(animate, 20); // Smooth animation speed
                 }
             }
@@ -300,35 +229,14 @@
         }
     
         // Set up Intersection Observer to detect when section enters viewport
-=======
-                    setTimeout(animate, 20); 
-                }
-            }
-    
-            counter.innerText = "0"; 
-            animate(); 
-        }
-    
-       
->>>>>>> 91e6d9b6b5fc7b62b9118cb4cec33b5fc96778ed
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     counters.forEach(updateCounter);
-<<<<<<< HEAD
                     observer.disconnect(); // Stops further triggering
                 }
             });
         }, { threshold: 0.5 }); // Activates when 50% of the section is visible
-=======
-                    observer.disconnect(); 
-                }
-            });
-        }, { threshold: 0.5 }); 
-    
-        // observer.observe(statisticsSection);
-    });
->>>>>>> 91e6d9b6b5fc7b62b9118cb4cec33b5fc96778ed
     
         observer.observe(statisticsSection);
     });
@@ -585,12 +493,8 @@ const courseDetails = {
     
       
 
-<<<<<<< HEAD
    //Testimonial
 
-=======
-   
->>>>>>> 91e6d9b6b5fc7b62b9118cb4cec33b5fc96778ed
 const wrapper = document.querySelector('.wrapper');
 const indicators = [...document.querySelectorAll('.indicators button')];
 
@@ -607,7 +511,6 @@ indicators.forEach((item, i) => {
 })
     
 
-<<<<<<< HEAD
 //Testimonial final
 if (window.location.pathname.includes("index.html")) {
 var testim = document.getElementById("testim"),
@@ -621,11 +524,6 @@ var testim = document.getElementById("testim"),
     testimTimer
     ;
 window.onload = function () {
-=======
-if (window.location.pathname.includes("index.html"))
-     {
-        var testim = document.getElementById("testim");
->>>>>>> 91e6d9b6b5fc7b62b9118cb4cec33b5fc96778ed
 
     // Testim Script
     function playSlide(slide) {
@@ -646,7 +544,6 @@ if (window.location.pathname.includes("index.html"))
         testimContent[slide].classList.add("active");
         testimDots[slide].classList.add("active");
 
-<<<<<<< HEAD
         currentActive = currentSlide;
 
         clearTimeout(testimTimer);
@@ -672,61 +569,6 @@ if (window.location.pathname.includes("index.html"))
 
 }
  
-=======
-    testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
-    testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
-    testimleftArrow = document.getElementById("left-arrow"),
-    testimRightArrow = document.getElementById("right-arrow"),
-    testimSpeed = 4500,
-    currentSlide = 0,
-    currentActive = 0,
-    testimTimer=0 ;
-
-  
-window.onload = function () {
-
-    function playSlide(slide) {
-        for (var k = 0; k < testimDots.length; k++) {
-            testimContent[k].classList.remove("active");
-            testimContent[k].classList.remove("inactive");
-            testimDots[k].classList.remove("active");
-        }
-        if (slide < 0) {
-            slide = currentSlide = testimContent.length - 1;
-        }
-        if (slide > testimContent.length - 1) {
-            slide = currentSlide = 0;
-        }
-        if (currentActive != currentSlide) {
-            testimContent[currentActive].classList.add("inactive");
-        }
-        testimContent[slide].classList.add("active");
-        testimDots[slide].classList.add("active");
-
-        currentActive = currentSlide;
-
-        clearTimeout(testimTimer);
-        testimTimer = setTimeout(function () {
-            playSlide(currentSlide += 1);
-        }, testimSpeed)
-    }
-    testimleftArrow.addEventListener("click", function () {
-        playSlide(currentSlide -= 1);
-    })
-    testimRightArrow.addEventListener("click", function () {
-        playSlide(currentSlide += 1);
-    })
-
-    for (var l = 0; l < testimDots.length; l++) {
-        testimDots[l].addEventListener("click", function () {
-            playSlide(currentSlide = testimDots.indexOf(this));
-        })
-    }
-    playSlide(currentSlide);
-
-}
-}
->>>>>>> 91e6d9b6b5fc7b62b9118cb4cec33b5fc96778ed
 }()
 );
 
