@@ -1,0 +1,567 @@
+body{
+    --about-color:#ffe342;
+       padding: 0px;
+    margin: 0px;
+}
+/* Nav */
+nav h1
+{
+    color: white;
+}
+nav
+{
+    z-index: 5555;
+    background-color: transparent;
+    width: 100%;
+    margin-top: 0px;
+    height: 70px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    transition: all .5s;
+    
+}
+.shadow
+{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px !important;
+}
+.notshadow
+{
+    box-shadow: none;
+}
+.navContent
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.head
+{
+    width: 25%;
+}
+nav ul 
+{
+    display: flex;
+    list-style-type: none;
+    align-content: end;
+    transition: all .5s;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    margin: 25px 25px;
+    padding: 15px 0px;
+}
+.navParent
+{
+    position: relative; 
+    /* overflow: hidden; */
+}
+
+.navParent a::after {
+    content: ""; 
+    opacity: 0;
+    width: 60%; 
+    height: 8%; 
+    position: absolute; 
+    bottom: -10px;
+    left: 0px; 
+    background-color: #ffe342; 
+    transition: all .1s ease-in-out;
+}
+.navParent a:hover::after 
+{
+    opacity: 1;
+    /* transform: translateX(20px); */
+    left: 18px;
+    color: brown;
+}
+/* acount-profile */
+#myaccount {
+    /* display: flex; */
+    justify-items:flex-end;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    display: none;
+}
+#account{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#myaccount img{
+    height: 75%;
+    aspect-ratio: 1/1;
+    /* height: auto; */
+    border-radius: 50%;
+    margin-right: 10%;
+    cursor: pointer;
+
+}
+
+#acount-desc p:nth-child(1)
+{
+    color: white;
+    margin: 0;
+}
+#acount-desc p:nth-child(2)
+{
+    margin: 0px;
+    color: rgb(163, 163, 163);
+}
+/* account card */
+.account-card{
+    position: fixed;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    display: none;
+    z-index: 2;    
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .5);
+}
+.account-card >img{
+    width:50%;
+    border-radius: 50%;
+    outline: 1px solid rgb(255, 217, 0,0.5);
+    outline-offset: 3px;
+    margin-bottom: 20px;
+}
+.account-card p{
+    margin: 2px;
+}
+.account-card #prof-name{
+    font-weight: bolder;
+    font-size: large;
+}
+.account-card #prof-email{
+    color: grey;
+}
+.account-card .card-buttons{
+    margin: 10px 0px 10px 0px;
+    width: 100%;
+}
+.card-buttons::before{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: lightgray;
+    transform: translateY(-5px);
+}
+.card-buttons::after{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: lightgray;
+    transform: translateY(5px);
+}
+.account-card .card-buttons button{
+    display: flex;
+    width: 100%;
+    /* margin: 5px; */
+    height:40px;
+    background-color: transparent;
+    /* border-radius: 30px; */
+    border: 0px;
+    /* font-size: 10px; */
+    cursor: pointer;
+    align-items: center;
+}
+.account-card .card-buttons button:hover
+{
+    background-color: lightgray;
+}
+.account-card .card-buttons button img
+{
+    height: 20px;
+    aspect-ratio: 1/1;
+    margin-right: 10px;
+}
+.show-account{
+    /* opacity: 1; */
+    display: flex;
+    animation: appear-bottom-right  0.5s ease forwards;
+}
+.hide-account{
+    /* opacity: 1; */
+    animation: hide-top-right  0.5s ease forwards;
+
+}
+@keyframes appear-bottom-right{
+    from{
+        opacity: 0;
+        transform: translate(100px,-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0,0);
+        
+    }
+}
+@keyframes hide-top-right{
+    from{
+        opacity: 1;
+        transform: translate(0,0);
+
+    }
+    to{
+        opacity: 0;
+        transform: translate(100px,-100px);
+
+        
+    }
+}
+
+/* account buttons */
+.account-buttons
+{
+    display: flex;
+}
+.account-buttons a{
+    text-decoration: none;
+    color: white;
+}
+.account-buttons button{
+    background-color: transparent;
+    color: white;
+    padding: 7px;
+    border-width: 0px;
+    border-radius: 10px;
+    width: 80px
+}
+.account-buttons button:nth-child(2){
+    border: 1px white solid;
+    width:80px;
+    transform:translateX(5px);
+    border-radius: 10px;
+}
+.account-buttons button:hover{
+    opacity: 0.8;
+}
+.menu-icon
+{
+    display: none;
+
+}
+.menu-icon i
+{
+    color: white;
+    font-size: 30px;
+}
+/* home */
+.home
+{
+    background-image: url(../imgs/about.jpg);
+    background-position: bottom center;
+    background-size:  cover;
+    height: 50vh;
+    margin-bottom: 20px;
+
+}
+
+
+.layer
+{
+    width: 100%;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.layer h2{
+    font-size: 2.5rem;
+    transform: translate(7vw,-10vh);
+}
+.layer h2::before{
+    content: "";
+    height: 70px;
+    width: 3px;
+    background-color: var(--about-color);
+    display: inline-block;
+    transform: translate(-2vw,30%);
+}
+/* About */
+a
+{
+    text-decoration: none;
+}
+.Head
+{
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+    border-bottom: solid 1px rgb(192, 187, 187);
+    margin-bottom: 20px;
+}
+
+
+.Head span
+{
+    font-size: 15px;
+    color: gray;
+    margin-right: 5px;
+    margin-left: 12px;
+    margin-bottom: 15px;
+}
+/* why choose us */
+#About{
+    padding: 5% 7% 3% 7%;
+    background-color: white;
+    --about-color:#ffe342;
+}
+.sub-header{
+    color:#daa520;
+    text-align: center;
+    font-size: larger;
+}
+.sub-header::before{
+    display: inline-block;
+    content: "";
+    width: 30px;
+    height:2px;
+    background-color: goldenrod;
+    transform: translate(-30%,-100%);
+}
+.sub-header::after{
+    display: inline-block;
+    content: "";
+    width: 30px;
+    height:2px;
+    background-color: goldenrod;
+    transform: translate(30%,-100%);
+}
+.about-items{
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+}
+#About h3,#About p{
+    color:black;
+    text-align: center;
+
+}
+#About img{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    /* font-size: 50px; */
+    color: var(--about-color);
+    width: 30%;
+    /* height: 70px; */
+}
+#About h3{
+    font-size: 20px;
+}
+
+#About{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* align-content: space-between; */
+    gap: 20px;
+}
+.about-container{
+    margin: 15px;
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    gap: 20px;;
+}
+
+
+/* About us */
+#Aboutus{
+    padding: 3% 10% 0% 10%;
+}
+#description
+{
+    margin-top: 5%;
+    display: flex;
+}
+#about-img img{
+    width: 100%;
+    height: 100%;
+}
+#about-img{
+    width: 40%;
+    height: 55vh;
+    margin-right: 5%;
+}
+#about-desc{
+    transform: translateY(5%);
+}
+#about-desc #desc
+{
+    margin-left: 3%;
+    color: #6B6A75;
+}
+#about-desc li{
+    margin-bottom:2% ;
+}
+/* Statistics */
+#Statistics
+{
+    margin: 0% 10% 7% 10%;
+    background-image: url(../imgs/mount-everest-pictures-1656-x-900-0p2xlriorb502v2k.jpg);
+    margin-top: 50px;
+    height: 40vh;
+    background-position:center  ;
+    background-size: cover;
+}
+#Statistics  .layer
+{
+    width: 100%;
+    height: 40vh;
+    background-color: rgba(0, 0, 0, .7);
+}
+#Statistics  .layer .container
+{
+    margin: auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    width: 100%;
+    justify-content: space-around;
+    color: white;
+}
+#Statistics  .layer .container .firstone
+{
+    text-align: center;
+    font-size: 20px;
+}
+
+/* instructors */
+#instructors{
+    margin: 10% 10% 7% 10%;
+}
+#instructors #content{
+    margin-top: 60px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+
+}
+.instructor-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 20vw;
+}
+.instructor-card > div{
+    width: 80%;
+    position: relative;
+
+}
+.instructor-card img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    outline: 1px pink dashed;
+    outline-offset: 6px;
+
+}
+.instructor-card .added-layer{
+    /* display: none; */
+    visibility: hidden;
+    width: 100%;
+    position: absolute;
+    aspect-ratio: 1/1;
+}
+.instructor-card div:hover .added-layer{
+    /* display: block; */
+    visibility: visible;
+}
+.instructor-card .layer{
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: auto;
+}
+.instructor-card .social-buttons
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-30%);
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.instructor-card .social-buttons i{
+    color: white;
+}
+
+.instructor-card h3{
+    margin: 0;
+}
+.instructor-card p{
+    margin: 5px;
+    text-align: center;
+}
+/* .instructor-card h3, #instructor-card p{
+    text-align: center;
+} */
+/* footer */
+#Contact
+{
+ 
+    background-color: black;
+    color: white;
+}
+.Contact-details
+{
+    width: 80%;
+    padding: 30px 0px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,300px);
+}
+.Contact-icons
+{
+    margin-bottom: 20px;
+}
+.Contact-icons i
+{
+    color: rgb(200, 171, 26);
+    margin-right: 5px;    
+}
+.social-icons
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.socialBtn
+{
+    width: 30%;
+    height: 20%;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.Contact-details .secondsecion a
+{
+    text-decoration: none;
+    color: white;
+    transition: all .2s ease-in-out;
+}
+.Contact-details .secondsecion a:hover
+{
+    color:rgb(200, 171, 26) ;
+}
