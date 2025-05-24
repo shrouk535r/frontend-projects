@@ -5,14 +5,14 @@
 
   //Nav Change Color
     window.addEventListener("scroll", () => {
-        var scrollTop = window.scrollY; // Get the current scroll position
-        var nav = document.getElementById("nav"); // Select the navbar element
-        var navCourse = document.getElementById("navCourse"); // Select the navbar element
-        var navAbout = document.getElementById("navAbout"); // Select the navbar element
-        var About = document.getElementById("About"); // Select the navbar element
-        var navRegister = document.getElementById("navRegister"); // Select the navbar element
-        var Register = document.getElementById("register"); // Select the navbar element
-        var iconUp = document.querySelector(".iconup"); // Optional: Fade-in/out icon element
+        var scrollTop = window.scrollY; 
+        var nav = document.getElementById("nav"); 
+        var navCourse = document.getElementById("navCourse"); 
+        var navAbout = document.getElementById("navAbout");
+        var About = document.getElementById("About"); 
+        var navRegister = document.getElementById("navRegister"); 
+        var Register = document.getElementById("register"); 
+        var iconUp = document.querySelector(".iconup"); 
         var about=document.querySelector('#about');
         var Courses=document.querySelector('#Courses');
         var iconNav=document.getElementById('iconNav');
@@ -20,106 +20,101 @@
        
         if (window.location.pathname.includes("index.html")) {
         if (scrollTop > About.offsetTop ) {
-            nav.style.backgroundColor = "black"; // Change background color to tomato
-            nav.classList.add('shadow'); // Set boxShadow to none
-            nav.classList.remove('nonshadow'); // Set boxShadow to none
+            nav.style.backgroundColor = "black"; 
+            nav.classList.add('shadow'); 
+            nav.classList.remove('nonshadow'); 
             console.log("Scroll detected");
     
-            // Fade-in effect for an icon (optional)
+          
             if (iconUp) {
-                iconUp.style.transition = "opacity 1s"; // Smooth transition
+                iconUp.style.transition = "opacity 1s"; 
                 iconUp.style.opacity = "1";
                 iconUp.style.display = "block";
             }
         } else {
-            nav.style.backgroundColor = "transparent"; // Change background color to black
-            nav.classList.add('nonshadow'); // Set boxShadow to none
-            nav.classList.remove('shadow'); // Set boxShadow to none
-            // Fade-out effect for an icon (optional)
+            nav.style.backgroundColor = "transparent"; 
+            nav.classList.add('nonshadow'); 
+            nav.classList.remove('shadow'); 
             if (iconUp) {
                 iconUp.style.transition = "opacity 1s";
                 iconUp.style.opacity = "0";
                 setTimeout(() => {
                     iconUp.style.display = "none";
-                }, 1000); // Matches fade-out duration
+                }, 1000); 
             }
         }
     }
     if (window.location.pathname.includes("courses.html")) {
         if (scrollTop>Courses.offsetTop-78) {
-            navCourse.style.backgroundColor = "black"; // Change background color to tomato
-            navCourse.classList.add('shadow'); // Set boxShadow to none
-            navCourse.classList.remove('nonshadow'); // Set boxShadow to none
-            //             console.log("Scroll detected");
+            navCourse.style.backgroundColor = "black"; 
+            navCourse.classList.add('shadow'); 
+            navCourse.classList.remove('nonshadow'); 
     
-            // Fade-in effect for an icon (optional)
             if (iconUp) {
-                iconUp.style.transition = "opacity 1s"; // Smooth transition
+                iconUp.style.transition = "opacity 1s"; 
                 iconUp.style.opacity = "1";
                 iconUp.style.display = "block";
             }
         } else {
-            navCourse.style.backgroundColor = "transparent"; // Change background color to black
-            navCourse.classList.add('nonshadow'); // Set boxShadow to none
-            navCourse.classList.remove('shadow'); // Set boxShadow to none
+            navCourse.style.backgroundColor = "transparent"; 
+            navCourse.classList.add('nonshadow'); 
+            navCourse.classList.remove('shadow'); 
             if (iconUp) {
                 iconUp.style.transition = "opacity 1s";
                 iconUp.style.opacity = "0";
                 setTimeout(() => {
                     iconUp.style.display = "none";
-                }, 1000); // Matches fade-out duration
+                }, 1000); 
             }
         }
     }
     if (window.location.pathname.includes("about.html")) {
         if (scrollTop>About.offsetTop-78) {
-            navAbout.style.backgroundColor = "black"; // Change background color to tomato
-            navAbout.classList.add('shadow'); // Set boxShadow to none
-            navAbout.classList.remove('nonshadow'); // Set boxShadow to none
-            //             console.log("Scroll detected");
-    
-            // Fade-in effect for an icon (optional)
+            navAbout.style.backgroundColor = "black"; 
+            navAbout.classList.add('shadow'); 
+            navAbout.classList.remove('nonshadow');
+            
             if (iconUp) {
-                iconUp.style.transition = "opacity 1s"; // Smooth transition
+                iconUp.style.transition = "opacity 1s"; 
                 iconUp.style.opacity = "1";
                 iconUp.style.display = "block";
             }
         } else {
-            navAbout.style.backgroundColor = "transparent"; // Change background color to black
-            navAbout.classList.add('nonshadow'); // Set boxShadow to none
-            navAbout.classList.remove('shadow'); // Set boxShadow to none
+            navAbout.style.backgroundColor = "transparent"; 
+            navAbout.classList.add('nonshadow'); 
+            navAbout.classList.remove('shadow'); 
             if (iconUp) {
                 iconUp.style.transition = "opacity 1s";
                 iconUp.style.opacity = "0";
                 setTimeout(() => {
                     iconUp.style.display = "none";
-                }, 1000); // Matches fade-out duration
+                }, 1000); 
             }
         }
     }
     if (window.location.pathname.includes("register.html")) {
         if (scrollTop>Register.offsetTop-75) {
-            navRegister.style.backgroundColor = "black"; // Change background color to tomato
-            navRegister.classList.add('shadow'); // Set boxShadow to none
-            navRegister.classList.remove('nonshadow'); // Set boxShadow to none
+            navRegister.style.backgroundColor = "black"; 
+            navRegister.classList.add('shadow'); 
+            navRegister.classList.remove('nonshadow'); 
               console.log("Scroll detected");
     
-            // Fade-in effect for an icon (optional)
+          
             if (iconUp) {
-                iconUp.style.transition = "opacity 1s"; // Smooth transition
+                iconUp.style.transition = "opacity 1s"; 
                 iconUp.style.opacity = "1";
                 iconUp.style.display = "block";
             }
         } else {
-            navRegister.style.backgroundColor = "transparent"; // Change background color to black
-            navRegister.classList.add('nonshadow'); // Set boxShadow to none
-            navRegister.classList.remove('shadow'); // Set boxShadow to none
+            navRegister.style.backgroundColor = "transparent"; 
+            navRegister.classList.add('nonshadow'); 
+            navRegister.classList.remove('shadow'); 
             if (iconUp) {
                 iconUp.style.transition = "opacity 1s";
                 iconUp.style.opacity = "0";
                 setTimeout(() => {
                     iconUp.style.display = "none";
-                }, 1000); // Matches fade-out duration
+                }, 1000); 
             }
         }
     }
@@ -159,19 +154,19 @@
     //     const rightArrow = document.querySelector(".secondCourseIcon");
     //     const leftArrow = document.querySelector(".firstCourseIcon");
     
-    //     const visibleCards = 4; // Number of visible cards at a time
+    //     const visibleCards = 4; 
     
     //     function updateSlide() {
-    //         courseContainer.innerHTML = ""; // Clear previous order
+    //         courseContainer.innerHTML = ""; 
     //         courseCards.forEach((card, index) => {
     //             if (index < visibleCards) {
-    //                 card.style.display = "block"; // Show first 4 cards
+    //                 card.style.display = "block"; 
     //                 card.style.opacity = "1";
     //             } else {
-    //                 card.style.display = "none"; // Hide extra cards
+    //                 card.style.display = "none";
     //                 card.style.opacity = "0";
     //             }
-    //             courseContainer.appendChild(card); // Re-add in correct order
+    //             courseContainer.appendChild(card); 
     //         });
     //     }
     
@@ -200,8 +195,8 @@
     //         }, 500);
     //     }
     
-    //      rightArrow.addEventListener("click", rotateLeft);
-    //      leftArrow.addEventListener("click", rotateRight);
+    //     //  rightArrow.addEventListener("click", rotateLeft);
+    //     //  leftArrow.addEventListener("click", rotateRight);
     
     //      updateSlide(); // Initialize carousel correctly
     // });
@@ -209,40 +204,40 @@
     
     
     
-    // document.addEventListener("DOMContentLoaded", () => {
-    //     const counters = document.querySelectorAll("#Statistics .firstone p:first-of-type");
-    //     const statisticsSection = document.querySelector("#Statistics");
+    document.addEventListener("DOMContentLoaded", () => {
+        const counters = document.querySelectorAll("#Statistics .firstone p:first-of-type");
+        const statisticsSection = document.querySelector("#Statistics");
     
-    //     function updateCounter(counter) {
-    //         let targetNumber = parseInt(counter.innerText);
-    //         let currentNumber = 0;
-    //         let increment = Math.ceil(targetNumber / 100); // Speed adjustment
+        function updateCounter(counter) {
+            let targetNumber = parseInt(counter.innerText);
+            let currentNumber = 0;
+            let increment = Math.ceil(targetNumber / 100);
     
-    //         function animate() {
-    //             if (currentNumber < targetNumber) {
-    //                 currentNumber += increment;
-    //                 if (currentNumber > targetNumber) currentNumber = targetNumber; // Prevent overshoot
-    //                 counter.innerText = currentNumber;
-    //                 setTimeout(animate, 20); // Smooth animation speed
-    //             }
-    //         }
+            function animate() {
+                if (currentNumber < targetNumber) {
+                    currentNumber += increment;
+                    if (currentNumber > targetNumber) currentNumber = targetNumber; // Prevent overshoot
+                    counter.innerText = currentNumber;
+                    setTimeout(animate, 20); 
+                }
+            }
     
-    //         counter.innerText = "0"; // Start from zero
-    //         animate(); // Begin animation
-    //     }
+            counter.innerText = "0"; 
+            animate(); 
+        }
     
-    //     // Set up Intersection Observer to detect when section enters viewport
-    //     const observer = new IntersectionObserver(entries => {
-    //         entries.forEach(entry => {
-    //             if (entry.isIntersecting) {
-    //                 counters.forEach(updateCounter);
-    //                 observer.disconnect(); // Stops further triggering
-    //             }
-    //         });
-    //     }, { threshold: 0.5 }); // Activates when 50% of the section is visible
+       
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    counters.forEach(updateCounter);
+                    observer.disconnect(); 
+                }
+            });
+        }, { threshold: 0.5 }); 
     
-    //     observer.observe(statisticsSection);
-    // });
+        // observer.observe(statisticsSection);
+    });
     
     //Course Page
 var searchinput=document.getElementById("searchinput")
@@ -308,17 +303,17 @@ var temp='';
 let temp2=``;
 // let check=true;
 var check=false;
-// Object to map course details
+
 const courseDetails = {
     photography: {
       count: 2,
       titles: ["Online Course Creation Secrets", "Become a Successful Online Teacher"]
     },
-    teacherTraining: {///
+    teacherTraining: {
       count: 2,
       titles: ["The Complete Online Teaching Masterclass", "How to Teach English Online and Get Paid"]
     },
-    coaching: {///
+    coaching: {
       count: 2,
       titles: ["How To Create An Online Course", "Build a Six-Figure Online Business Selling Online Courses"]
     },
@@ -326,11 +321,11 @@ const courseDetails = {
       count: 1,
       titles: ["How To Create In-Demand Online Courses"]
     },
-    technology: {///
+    technology: {
       count: 3,
       titles: ["How To Sell In-Person Course With LearnPress", "How To Teach Online Courses Effectively", "How to Create an Awesome Online Course"]
     },
-    teachingOnline: {///
+    teachingOnline: {
       count: 4,
       titles: [
         "Introduction LearnPress – LMS plugin",
@@ -347,16 +342,14 @@ const courseDetails = {
         "Eduma Course Creation for Passive Income"
       ]
     },
-    passiveIncome: {//
+    passiveIncome: {
       count: 2,
       titles: ["Launch Your Own Online School and Increase Your Profits", "Easy Zurb Foundation"]
     }
   };
   
-  // Select checkboxes and the target div
   const courseContainer = document.getElementById('courseCardPageId');
   
-  // Event listener for all checkboxes
   checkboxes.forEach((checkbox) => {
     checkbox.addEventListener('change', updateCourses);
   });
@@ -365,11 +358,10 @@ const courseDetails = {
     let temp = '';
     let hasChecked = false;
   
-    // Iterate through all checkboxes
     checkboxes.forEach((checkbox) => {
       if (checkbox.checked) {
         hasChecked = true;
-        let category = checkbox.id; // Checkbox ID maps to courseDetails key
+        let category = checkbox.id; 
         if (courseDetails[category]) {
           const details = courseDetails[category];
   
@@ -402,30 +394,26 @@ const courseDetails = {
       }
       
     });
-    // Update the course container
     if (hasChecked) {
-        selectedCourses = temp; // Store current selection
+        selectedCourses = temp; 
       }
     
-      // If no checkboxes are checked, display previous selection or a fallback message
       courseContainer.innerHTML = hasChecked ? temp : selectedCourses || `<p style="text-align: center; font-size: 18px; color: gray;">No courses selected. Please choose a category to view courses.</p>`;  }
   
 
-      const searchInput = document.getElementById('searchinput'); // Your search input field
+      const searchInput = document.getElementById('searchinput'); 
 
       function searchCourses() {
-        const searchValue = searchInput.value.toLowerCase(); // Convert input to lowercase for case-insensitive search
+        const searchValue = searchInput.value.toLowerCase(); 
         let results = '';
-        let hasCheckedCategory = false; // Flag to check if any category is selected
+        let hasCheckedCategory = false; 
     
-        // Iterate through all checkboxes to identify selected categories
         checkboxes.forEach((checkbox) => {
             if (checkbox.checked) {
-                hasCheckedCategory = true; // Mark that at least one category is selected
-                const category = checkbox.id; // Get the category ID
-                const titles = courseDetails[category].titles; // Access titles array for the category
+                hasCheckedCategory = true; 
+                const category = checkbox.id; 
+                const titles = courseDetails[category].titles; 
     
-                // Perform search within selected categories
                 titles.forEach((title, index) => {
                     if (title.toLowerCase().includes(searchValue)) {
                         results += `
@@ -487,28 +475,25 @@ const courseDetails = {
             }
         }
     
-        // Display fallback messages if no results are found
         document.getElementById('courseCardPageId').innerHTML = results || (hasCheckedCategory
             ? `<p style="text-align: center; color: gray;">No courses found matching your search in the selected categories.</p>`
             : `<p style="text-align: center; color: gray;">Please select a category or type a search term to find courses.</p>`);
     }
     
-    // Event listener for search input
     if (window.location.pathname.includes("courses.html")) {
     searchInput.addEventListener('keyup', searchCourses);
     }
-    // Add this for category checkbox changes to refresh results
     checkboxes.forEach((checkbox) => {
         checkbox.addEventListener('change', searchCourses);
     });
     
       
 
-   //Testimonial
-   const wrapper = document.querySelector('.wrapper');
+   
+const wrapper = document.querySelector('.wrapper');
 const indicators = [...document.querySelectorAll('.indicators button')];
 
-let currentTestimonial = 0; // Default 0
+let currentTestimonial = 0; 
 
 indicators.forEach((item, i) => {
     item.addEventListener('click', () => {
@@ -521,67 +506,64 @@ indicators.forEach((item, i) => {
 })
     
 
-//Testimonial final
-// if (window.location.pathname.includes("index.html"))
-//      {
-//         var testim = document.getElementById("testim");
+if (window.location.pathname.includes("index.html"))
+     {
+        var testim = document.getElementById("testim");
 
 
-//     testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
-//     testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
-//     testimleftArrow = document.getElementById("left-arrow"),
-//     testimRightArrow = document.getElementById("right-arrow"),
-//     testimSpeed = 4500,
-//     currentSlide = 0,
-//     currentActive = 0,
-//     testimTimer
-//     ;
+    testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
+    testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
+    testimleftArrow = document.getElementById("left-arrow"),
+    testimRightArrow = document.getElementById("right-arrow"),
+    testimSpeed = 4500,
+    currentSlide = 0,
+    currentActive = 0,
+    testimTimer=0 ;
 
   
-// window.onload = function () {
+window.onload = function () {
 
-//     // Testim Script
-//     function playSlide(slide) {
-//         for (var k = 0; k < testimDots.length; k++) {
-//             testimContent[k].classList.remove("active");
-//             testimContent[k].classList.remove("inactive");
-//             testimDots[k].classList.remove("active");
-//         }
-//         if (slide < 0) {
-//             slide = currentSlide = testimContent.length - 1;
-//         }
-//         if (slide > testimContent.length - 1) {
-//             slide = currentSlide = 0;
-//         }
-//         if (currentActive != currentSlide) {
-//             testimContent[currentActive].classList.add("inactive");
-//         }
-//         testimContent[slide].classList.add("active");
-//         testimDots[slide].classList.add("active");
+    function playSlide(slide) {
+        for (var k = 0; k < testimDots.length; k++) {
+            testimContent[k].classList.remove("active");
+            testimContent[k].classList.remove("inactive");
+            testimDots[k].classList.remove("active");
+        }
+        if (slide < 0) {
+            slide = currentSlide = testimContent.length - 1;
+        }
+        if (slide > testimContent.length - 1) {
+            slide = currentSlide = 0;
+        }
+        if (currentActive != currentSlide) {
+            testimContent[currentActive].classList.add("inactive");
+        }
+        testimContent[slide].classList.add("active");
+        testimDots[slide].classList.add("active");
 
-//         currentActive = currentSlide;
+        currentActive = currentSlide;
 
-//         clearTimeout(testimTimer);
-//         testimTimer = setTimeout(function () {
-//             playSlide(currentSlide += 1);
-//         }, testimSpeed)
-//     }
-//     testimleftArrow.addEventListener("click", function () {
-//         playSlide(currentSlide -= 1);
-//     })
-//     testimRightArrow.addEventListener("click", function () {
-//         playSlide(currentSlide += 1);
-//     })
+        clearTimeout(testimTimer);
+        testimTimer = setTimeout(function () {
+            playSlide(currentSlide += 1);
+        }, testimSpeed)
+    }
+    testimleftArrow.addEventListener("click", function () {
+        playSlide(currentSlide -= 1);
+    })
+    testimRightArrow.addEventListener("click", function () {
+        playSlide(currentSlide += 1);
+    })
 
-//     for (var l = 0; l < testimDots.length; l++) {
-//         testimDots[l].addEventListener("click", function () {
-//             playSlide(currentSlide = testimDots.indexOf(this));
-//         })
-//     }
-//     playSlide(currentSlide);
+    for (var l = 0; l < testimDots.length; l++) {
+        testimDots[l].addEventListener("click", function () {
+            playSlide(currentSlide = testimDots.indexOf(this));
+        })
+    }
+    playSlide(currentSlide);
 
-// }
-// }
+}
+}
 }()
 );
 
@@ -612,8 +594,6 @@ indicators.forEach((item, i) => {
                             document.getElementById(split[0]).style.display='flex';
                         else
                             document.getElementById(split[0]).style.display='block';
-        
-                            
         
                         })
         
@@ -683,7 +663,7 @@ indicators.forEach((item, i) => {
         {
             signupInput.addEventListener("click", (e) => {
                 
-                e.preventDefault(); // Prevent form submission
+                e.preventDefault(); 
                 const user = {
                     name: userName.value.trim(),
                     email: emailInput.value.trim(),
@@ -977,7 +957,7 @@ function getcookies(searchedpropetry)
     for(var object of objects)
     {
         var cookie=object.split("=")
-        var prop=cookie[0]
+        var prop=cookie[0].trim()
         var value=cookie[1]
         if(prop==searchedpropetry)
         {
